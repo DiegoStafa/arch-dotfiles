@@ -1,0 +1,25 @@
+configuration {
+	modi: "drun,run,window,clipboard:greenclip print";
+	width: 40;
+	lines: 15;
+	columns: 1;
+	font: "Cantarell 9";
+	show-icons: false;
+	terminal: "alacritty";
+	ssh-client: "ssh";
+	ssh-command: "{terminal} -e {ssh-client} {host}";
+	run-command: "{cmd}";
+	run-shell-command: "{terminal} --hold -e fish -c "{cmd}; exec fish" &";
+	icon-theme: "Papirus";
+	separator-style: "solid";
+	hide-scrollbar: true;
+	dpi: 96;
+	show-match: false;
+	color-normal: "#001b2b34,	#ebdbb2, 	#001b2b34,	#98971a,	#000000";
+	color-urgent: "#373737, 	#dc322f, 	#373737, 	#dc322f,	#ebdbb2";
+	color-active: "#001b2b34,	#ebdbb2, 	#001b2b34,	#98971a,	#000000";
+	color-window: "#e0282828, 	#40ebdbb2,	#00ebdbb2";
+	kb-mode-next: "Super+Right,Tab";
+	kb-mode-previous: "Super+Left,Ctrl+Tab";
+	kb-row-tab: "";
+}

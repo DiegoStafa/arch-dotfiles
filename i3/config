@@ -1,0 +1,196 @@
+# ------------------------ APPEARANCE -----------------------#
+
+for_window [class="^.*"] 		border pixel 1 
+font pango:				monospace 0
+
+# window colours: border background text
+client.focused 		#ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
+client.focused_inactive	#282828 #282828 #282828 #282828 #282828
+client.unfocused	#282828 #282828 #282828 #282828 #282828
+client.urgent		#282828 #282828 #282828 #282828 #282828
+
+hide_edge_borders smart
+# default gaps values
+set 	$inner_gaps 			10
+set 	$outer_gaps 			10
+
+gaps 	inner 				$inner_gaps
+gaps 	outer				$outer_gaps
+
+# gaps mode
+set 	$mode_gaps_out			mode gaps: OUT
+set 	$mode_gaps_in 			mode gaps: IN
+
+bindsym $mod+KP_Add			gaps inner current	plus 	10;		gaps outer current 	plus 	10
+bindsym $mod+KP_Subtract		gaps inner current	minus 	10;		gaps outer current 	minus 	10
+bindsym $mod+End			gaps inner current	set 	0;		gaps outer current 	set 	0
+bindsym $mod+KP_Enter			gaps inner current	set 	$inner_gaps;	gaps outer current 	set 	$outer_gaps
+
+bindsym $mod+Shift+KP_Add		gaps inner all		plus 	10;		gaps outer all		plus 	10
+bindsym $mod+Shift+KP_Subtract		gaps inner all		minus 	10;		gaps outer all		minus 	10
+bindsym $mod+Shift+End			gaps inner all		set 	0;		gaps outer all		set 	0
+bindsym $mod+Shift+KP_Enter		gaps inner all		set 	$inner_gaps;	gaps outer all		set 	$outer_gaps
+
+bindsym $mod+Shift+i 			mode "$mode_gaps_in"
+bindsym $mod+Shift+o			mode "$mode_gaps_out"
+
+mode "$mode_gaps_out" 
+{
+        bindsym KP_Add			gaps outer current	plus	5
+        bindsym KP_Subtract 		gaps outer current 	minus	5
+        bindsym End  	 		gaps outer current 	set	0
+	bindsym KP_Enter		gaps outer current	set 	$outer_gaps
+ 
+        bindsym Shift+KP_Add		gaps outer all		plus	5
+        bindsym Shift+KP_Subtract 	gaps outer all 		minus	5
+        bindsym Shift+End		gaps outer all 		set	0
+	bindsym Shift+KP_Enter		gaps outer all		set 	$outer_gaps
+        
+	bindsym Escape			mode "default"
+}
+
+mode "$mode_gaps_in" 
+{
+        bindsym KP_Add			gaps inner current	plus	5
+        bindsym KP_Subtract 		gaps inner current 	minus	5
+        bindsym End	   		gaps inner current 	set	0
+	bindsym KP_Enter		gaps inner current	set 	$inner_gaps
+
+        bindsym Shift+KP_Add		gaps inner all		plus	5
+        bindsym Shift+KP_Subtract 	gaps inner all 		minus	5
+        bindsym Shift+End		gaps inner all 		set	0
+	bindsym Shift+KP_Enter		gaps inner all		set	$inner_gaps
+	
+	bindsym Escape 			mode "default"
+}
+
+# --------------------- wm keybind -------------------------#
+
+# drag floating windows
+floating_modifier		$mod
+ 
+# toggle tiling / floating
+bindsym $mod+Shift+space	floating toggle
+
+# split orientation
+bindsym $mod+h			split h
+bindsym $mod+v			split v
+
+# change layout
+bindsym $mod+s			layout stacking
+bindsym $mod+w			layout tabbed
+bindsym $mod+e			layout toggle split
+
+# Focus container on the left, bottom, top, right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move window
+bindsym $mod+Shift+Left		move left
+bindsym $mod+Shift+Down		move down
+bindsym $mod+Shift+Up		move up
+bindsym $mod+Shift+Right	move right
+
+# kill focused window
+bindsym $mod+Shift+q		kill
+
+# fullscreen
+bindsym $mod+f			fullscreen toggle
+
+# resize window
+bindsym $mod+r 			mode "resize mode"
+
+mode "resize mode"
+{
+        bindsym Right		resize grow 	width 	10 px or 10 ppt
+        bindsym Up 		resize shrink 	height 	10 px or 10 ppt
+        bindsym Down 		resize grow 	height 	10 px or 10 ppt
+        bindsym Left 		resize shrink 	width 	10 px or 10 ppt
+
+        # back to normal
+        bindsym Return 		mode "default"
+        bindsym Escape 		mode "default"
+        bindsym $mod+r 		mode "default"
+}
+
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# ---------------- startup programs --------------------
+
+exec --no-startup-id "picom"
+exec --no-startup-id "redshift"
+exec --no-startup-id "$HOME/.config/feh/.fehbg"
+exec --no-startup-id "polybar mybar"
+
+# ---------------- personal keybinds -------------------
+
+bindsym $mod+Return	exec --no-startup-id "alacritty"
+bindsym $mod+period 	exec --no-startup-id "alacritty --class _scratchpad"
+
+bindsym $mod+d		exec --no-startup-id "rofi -show drun"
+bindsym $mod+c 		exec --no-startup-id "rofi -show clipboard"
+bindsym $mod+Tab	exec --no-startup-id "rofi -show window"
+
+bindsym $mod+b 		exec --no-startup-id "$HOME/scripts/floating-toggle bluetoothctl"
+bindsym $mod+n 		exec --no-startup-id "$HOME/scripts/floating-toggle newsboat"
+bindsym $mod+m 		exec --no-startup-id "$HOME/scripts/floating-toggle cmus"
+bindsym $mod+Menu	exec --no-startup-id "$HOME/scripts/floating-toggle vim $HOME/Desktop/notes"
+bindsym $mod+KP_Divide	exec --no-startup-id "$HOME/scripts/floating-toggle ranger"
+
+bindsym $mod+Home	exec --no-startup-id "$HOME/scripts/maxim"
+bindsym $mod+Prior	exec --no-startup-id "$HOME/scripts/maxim -pop"
+bindsym $mod+Next	exec --no-startup-id "$HOME/scripts/minim"
+
+bindsym $mod+BackSpace		exec --no-startup-id "$HOME/scripts/screenshot"
+bindsym $mod+Shift+BackSpace	exec --no-startup-id "$HOME/scripts/screenshot -menu"
+
+bindsym $mod+Escape	exec --no-startup-id "$HOME/scripts/powermenu"
+bindsym $mod+Alt_L	exec --no-startup-id "$HOME/scripts/polybar-toggle"
+
+
+bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+minus move scratchpad
+
+for_window [title="Event Tester"] floating enable
+for_window [instance="_scratchpad"] floating enable, move scratchpad, scratchpad show
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume 	exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume 	exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute 		exec --no-startup-id pactl set-sink-mute   0 toggle
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp 	exec --no-startup-id xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown 	exec --no-startup-id xbacklight -dec 5 # decrease screen brightness
+
+bindsym $mod+Shift+C reload
+bindsym $mod+Shift+r restart
+
+focus_follows_mouse no
+
+set $mod Mod4

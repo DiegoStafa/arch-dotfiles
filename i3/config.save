@@ -1,0 +1,267 @@
+##############################################################
+#							     #	
+# ------------------------ APPEARANCE -----------------------#
+#							     #					
+##############################################################
+
+# default gaps values
+set 	$inner_gaps 			30
+set 	$outer_gaps 			25
+
+gaps 	inner 				$inner_gaps
+gaps 	outer				$outer_gaps
+
+# gaps mode
+set 	$mode_gaps_out			mode gaps: OUT
+set 	$mode_gaps_in 			mode gaps: IN
+
+bindsym $mod+KP_Add			gaps inner current	plus 	10;		gaps outer current 	plus 	10
+bindsym $mod+KP_Subtract		gaps inner current	minus 	10;		gaps outer current 	minus 	10
+bindsym $mod+KP_Delete			gaps inner current	set 	0;		gaps outer current 	set 	0
+bindsym $mod+KP_Enter			gaps inner current	set 	$inner_gaps;	gaps outer current 	set 	$outer_gaps
+
+bindsym $mod+Shift+KP_Add		gaps inner all		plus 	10;		gaps outer all		plus 	10
+bindsym $mod+Shift+KP_Subtract		gaps inner all		minus 	10;		gaps outer all		minus 	10
+bindsym $mod+Shift+KP_Delete		gaps inner all		set 	0;		gaps outer all		set 	0
+bindsym $mod+Shift+KP_Enter		gaps inner all		set 	$inner_gaps;	gaps outer all		set 	$outer_gaps
+
+bindsym $mod+Shift+i 			mode "$mode_gaps_in"
+bindysm $mod+Shift+o			mode "$mode_gaps_out"
+
+mode "$mode_gaps_out" 
+{
+        bindsym KP_Add			gaps outer current	plus	5
+        bindsym KP_Subtract 		gaps outer current 	minus	5
+        bindsym KP_0  	 		gaps outer current 	set	0
+	bindsym KP_Enter		gaps outer current	set 	$outer_gaps
+ 
+        bindsym Shift+KP_Add		gaps outer all		plus	5
+        bindsym Shift+KP_Subtract 	gaps outer all 		minus	5
+        bindsym Shift+KP_0		gaps outer all 		set	0
+	bindsym Shift+KP_Enter		gaps outer all		set 	$outer_gaps
+        
+	bindsym Escape			mode "default"
+}
+
+mode "$mode_gaps_in" 
+{
+        bindsym KP_Add			gaps inner current	plus	5
+        bindsym KP_Subtract 		gaps inner current 	minus	5
+        bindsym KP_0	   		gaps inner current 	set	0
+	bindsym KP_Enter		gaps inner current	set 	$inner_gaps
+
+        bindsym Shift+KP_Add		gaps inner all		plus	5
+        bindsym Shift+KP_Subtract 	gaps inner all 		minus	5
+        bindsym Shift+KP_0		gaps inner all 		set	0
+	bindsym Shift+KP_Enter		gaps inner all		set	$inner_gaps
+	
+	bindsym Escape 			mode "default"
+}
+
+for_window [class="^.*"] 		border pixel 1 
+
+client.focused #808080 #808080 #808080 #808080 #808080
+
+font pango:				monospace 0
+
+#############################################################
+# --------------------- i3 keybind -------------------------#
+#############################################################
+
+
+# drag floating windows
+floating_modifier		$mod
+ 
+# toggle tiling / floating
+bindsym $mod+Shift+space	floating toggle
+bindsym $mod+b 			border toggle
+
+# split orientation
+bindsym $mod+h			split h
+bindsym $mod+v			split v
+
+# change layout
+bindsym $mod+s			layout stacking
+bindsym $mod+w			layout tabbed
+bindsym $mod+e			layout toggle split
+
+# move window
+bindsym $mod+Shift+Left		move left
+bindsym $mod+Shift+Down		move down
+bindsym $mod+Shift+Up		move up
+bindsym $mod+Shift+Right	move right
+
+# change focus
+bindsym $mod+Left		focus left
+bindsym $mod+Down		focus down
+bindsym $mod+Up			focus up
+bindsym $mod+Right		focus right
+bindsym $mod+a			focus parent
+bindsym $mod+space		focus mode_toggle
+
+# kill focused window
+bindsym $mod+Shift+q		kill
+
+# fullscreen
+bindsym $mod+f			fullscreen toggle
+
+# resize window
+bindsym $mod+r 			mode "resize mode"
+
+mode "resize mode"
+{
+        bindsym Right		resize grow 	width 	10 px or 10 ppt
+        bindsym Up 		resize shrink 	height 	10 px or 10 ppt
+        bindsym Down 		resize grow 	height 	10 px or 10 ppt
+        bindsym Left 		resize shrink 	width 	10 px or 10 ppt
+
+        # back to normal
+        bindsym Return 		mode "default"
+        bindsym Escape 		mode "default"
+        bindsym $mod+r 		mode "default"
+}
+
+
+###################################################################
+# ------------------------- workspace --------------------------- #
+###################################################################
+
+# names for default workspaces
+set $ws1		"1"
+set $ws2		"2"
+set $ws3		"3"
+set $ws4		"4"
+set##############################################################
+#							     #	
+# ------------------------ APPEARANCE -----------------------#
+#							     #					
+##############################################################
+
+# default gaps values
+set 	$inner_gaps 			30
+set 	$outer_gaps 			25
+
+gaps 	inner 				$inner_gaps
+gaps 	outer				$outer_gaps
+
+# gaps mode
+set 	$mode_gaps_out			mode gaps: OUT
+set 	$mode_gaps_in 			mode gaps: IN
+
+bindsym $mod+KP_Add			gaps inner current	plus 	10;		gaps outer current 	plus 	10
+bindsym $mod+KP_Subtract		gaps inner current	minus 	10;		gaps outer current 	minus 	10
+bindsym $mod+KP_Delete			gaps inner current	set 	0;		gaps outer current 	set 	0
+bindsym $mod+KP_Enter			gaps inner current	set 	$inner_gaps;	gaps outer current 	set 	$outer_gaps
+
+bindsym $mod+Shift+KP_Add		gaps inner all		plus 	10;		gaps outer all		plus 	10
+bindsym $mod+Shift+KP_Subtract		gaps inner all		minus 	10;		gaps outer all		minus 	10
+bindsym $mod+Shift+KP_Delete		gaps inner all		set 	0;		gaps outer all		set 	0
+bindsym $mod+Shift+KP_Enter		gaps inner all		set 	$inner_gaps;	gaps outer all		set 	$outer_gaps
+
+bindsym $mod+Shift+i 			mode "$mode_gaps_in"
+bindysm $mod+Shift+o			mode "$mode_gaps_out"
+
+mode "$mode_gaps_out" 
+{
+        bindsym KP_Add			gaps outer current	plus	5
+        bindsym KP_Subtract 		gaps outer current 	minus	5
+        bindsym KP_0  	 		gaps outer current 	set	0
+	bindsym KP_Enter		gaps outer current	set 	$outer_gaps
+ 
+        bindsym Shift+KP_Add		gaps outer all		plus	5
+        bindsym Shift+KP_Subtract 	gaps outer all 		minus	5
+        bindsym Shift+KP_0		gaps outer all 		set	0
+	bindsym Shift+KP_Enter		gaps outer all		set 	$outer_gaps
+        
+	bindsym Escape			mode "default"
+}
+
+mode "$mode_gaps_in" 
+{
+        bindsym KP_Add			gaps inner current	plus	5
+        bindsym KP_Subtract 		gaps inner current 	minus	5
+        bindsym KP_0	   		gaps inner current 	set	0
+	bindsym KP_Enter		gaps inner current	set 	$inner_gaps
+
+        bindsym Shift+KP_Add		gaps inner all		plus	5
+        bindsym Shift+KP_Subtract 	gaps inner all 		minus	5
+        bindsym Shift+KP_0		gaps inner all 		set	0
+	bindsym Shift+KP_Enter		gaps inner all		set	$inner_gaps
+	
+	bindsym Escape 			mode "default"
+}
+
+for_window [class="^.*"] 		border pixel 1 
+
+client.focused #808080 #808080 #808080 #808080 #808080
+
+font pango:				monospace 0
+
+#############################################################
+# --------------------- i3 keybind -------------------------#
+#############################################################
+
+
+# drag floating windows
+floating_modifier		$mod
+ 
+# toggle tiling / floating
+bindsym $mod+Shift+space	floating toggle
+bindsym $mod+b 			border toggle
+
+# split orientation
+bindsym $mod+h			split h
+bindsym $mod+v			split v
+
+# change layout
+bindsym $mod+s			layout stacking
+bindsym $mod+w			layout tabbed
+bindsym $mod+e			layout toggle split
+
+# move window
+bindsym $mod+Shift+Left		move left
+bindsym $mod+Shift+Down		move down
+bindsym $mod+Shift+Up		move up
+bindsym $mod+Shift+Right	move right
+
+# change focus
+bindsym $mod+Left		focus left
+bindsym $mod+Down		focus down
+bindsym $mod+Up			focus up
+bindsym $mod+Right		focus right
+bindsym $mod+a			focus parent
+bindsym $mod+space		focus mode_toggle
+
+# kill focused window
+bindsym $mod+Shift+q		kill
+
+# fullscreen
+bindsym $mod+f			fullscreen toggle
+
+# resize window
+bindsym $mod+r 			mode "resize mode"
+
+mode "resize mode"
+{
+        bindsym Right		resize grow 	width 	10 px or 10 ppt
+        bindsym Up 		resize shrink 	height 	10 px or 10 ppt
+        bindsym Down 		resize grow 	height 	10 px or 10 ppt
+        bindsym Left 		resize shrink 	width 	10 px or 10 ppt
+
+        # back to normal
+        bindsym Return 		mode "default"
+        bindsym Escape 		mode "default"
+        bindsym $mod+r 		mode "default"
+}
+
+
+###################################################################
+# ------------------------- workspace --------------------------- #
+###################################################################
+
+# names for default workspaces
+set $ws1		"1"
+set $ws2		"2"
+set $ws3		"3"
+set $ws4		"4"
+set

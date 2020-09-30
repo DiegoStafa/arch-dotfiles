@@ -1,0 +1,377 @@
+;==========================================================
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;==========================================================
+
+###########################################################
+#---------------------- VARIABLES ------------------------#
+###########################################################
+
+[colors]
+bg 		= #80000000
+fg 		= #fff
+
+
+
+background-alt		= #00000000
+foreground-alt		= #777
+
+primary			= #777
+secondary		= #000
+alert			= #bd2c40
+active 			= #b4fb73 
+
+### 20b2a6
+
+###########################################################
+#---------------------- BAR ------------------------------#
+###########################################################
+
+[bar/prototype]
+monitor			= ${env:MONITOR:eDP1}
+background		= ${colors.bg}
+foreground		= ${colors.fg}
+
+line-size		= 1
+line-color		= #f00
+
+font-0			= source code pro light:size=10;3
+font-1 			= FontAwesome5Free:style=Solid:size=9;3
+font-2 			= FontAwesome5Free:style=Regular:size=9;s3
+font-3 			= FontAwesome5Brands:style=Regular:size=9;3
+font-4			= Roboto:size=10;3
+font-5			= Noto Font Emoji:size=10:3
+
+[bar/mybar]
+inherit			= bar/prototype
+radius			= 0
+height			= 20
+width			= 100%
+bottom			= true
+modules-left		= i3 title
+modules-center		= date
+modules-right		= wttrin temperature pulseaudio xbacklight xkeyboard
+
+module-margin-right	= 1
+fixed-center		= true
+
+
+###########################################################
+#---------------------- MODULES --------------------------#
+###########################################################
+
+[module/title]
+type 				= internal/xwindow
+format 				= <label>
+format-padding 			= 2
+label 				= %title%
+label-maxlen 			= 50
+label-empty 			=
+
+[module/wttrin]
+type 				= custom/script
+exec 				= /home/diego/scripts/wttr-out
+interval 			= 180
+format 				= <label>
+format-background 		= ${colors.bg}
+format-foreground 		= ${colors.fg}
+label 				= %output%
+click-left 			= alacritty -e fish -c "curl -s wttr.in/Cavarzere; exec fish" &
+click-right			= alacritty -e fish -c "curl -s v2.wttr.in/Cavarzere; exec fish" &
+
+[module/xkeyboard]
+type				= internal/xkeyboard
+
+blacklist-0 			= scroll lock
+format 				= <label-indicator>
+
+indicator-icon-default 		=
+
+label-indicator-on-capslock 	= " "
+label-indicator-off-capslock 	= 
+label-indicator-on-numlock 	= " "
+label-indicator-off-numlock 	= 
+
+[module/filesystem]
+type 				= internal/fs
+interval 			= 25
+
+mount-0 			= /
+
+label-mounted 			= %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted 		= %mountpoint% not mounted
+label-unmounted-foreground 	= ${colors.foreground-alt}
+
+
+
+[module/i3]
+type 				= internal/i3
+format 				= <label-state> <label-mode>
+index-sort 			= true
+wrapping-scroll 		= false
+
+; Only show workspaces on the same output as the bar
+label-mode-padding 		= 1
+label-mode-foreground 		= #000
+label-mode-background 		= ${colors.primary}
+
+; Active workspace on focused monitor
+label-focused 			= %index%
+label-focused-background 	= ${colors.bg}
+label-focused-underline		= ${colors.fg}
+label-focused-foreground	= ${colors.active}
+label-focused-padding 		= 1
+
+; Inactive workspace on any monitor
+label-unfocused 		= %index%
+label-unfocused-padding 	= 1
+
+; Active workspace on unfocused monitor
+label-visible 			= %index%
+label-visible-background 	= ${self.label-focused-background}
+label-visible-underline 	= ${self.label-focused-underline}
+label-visible-padding 		= ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent 			= %index%
+label-urgent-background 	= ${colors.alert}
+label-urgent-padding 		= 1
+
+
+[module/xbacklight]
+type 				= internal/xbacklight
+
+format 				= <label> <bar>
+;format-underline 		= #2e2c2f
+label 				= 
+
+bar-width 			= 20
+bar-indicator 			= 
+bar-indicator-foreground 	= 
+bar-indicator-font 		= 2
+bar-fill 			= ⁃
+bar-fill-font 			= 2
+bar-fill-foreground 		= ${colors.active}
+bar-empty 			= ⁃
+bar-empty-font 			= 2
+bar-empty-foreground 		= ${colors.foreground-alt}
+
+
+[module/cpu]
+type 				= internal/cpu
+interval 			= 2
+format-prefix 			= "ICONA"
+format-prefix-foreground 	= ${colors.foreground-alt}
+format-underline 		= #f90000
+label 				= %percentage:2%%
+
+
+[module/memory]
+type 				= internal/memory
+interval 			= 2
+format-prefix 			= "ICONA"
+format-prefix-foreground 	= ${colors.foreground-alt}
+format-underline 		= #4bffdc
+label 				= %percentage_used%%
+
+
+[module/wlan]
+type 				= internal/network
+interface 			= wlp3s0f0
+interval 			= 3.0
+
+format-connected 		= <ramp-signal> <label-connected>
+format-connected-underline 	= #9f78e1
+label-connected 		= %essid%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 			= 
+ramp-signal-1 			= 
+ramp-signal-2 			= 
+ramp-signal-3 			= 
+ramp-signal-4 			= 
+ramp-signal-foreground 		= ${colors.foreground-alt}
+
+
+[module/date]
+type 				= internal/date
+interval 			= 5
+
+date-alt 			= "%d-%m-%Y"
+
+time 				= "%A %H:%M"
+time-alt 			= %H:%M:%S
+
+format-prefix-foreground 	= ${colors.foreground-alt}
+
+label 				= %time% %date%
+
+
+[module/pulseaudio]
+type 				= internal/pulseaudio
+sink				= alsa_output.pci-0000_00_1b.0.analog-stereo
+
+format-volume 			= <label-volume> <bar-volume>
+label-volume 			= 
+label-volume-foreground 	= ${root.foreground}
+
+label-muted 			=  muted
+label-muted-foreground 		= #aaa
+
+bar-volume-width 		= 20
+bar-volume-foreground-0 	= ${colors.active}
+bar-volume-foreground-1 	= ${colors.active}
+bar-volume-foreground-2 	= ${colors.active}
+bar-volume-foreground-3 	= ${colors.active}
+bar-volume-foreground-4 	= ${colors.active}
+bar-volume-foreground-5 	= #f5a70a
+bar-volume-foreground-6 	= #ff5555
+bar-volume-gradient 		= false
+bar-volume-indicator 		= 
+bar-volume-indicator-font 	= 2
+bar-volume-fill 		= ⁃
+
+bar-volume-fill-font 		= 2
+bar-volume-empty 		= ⁃
+bar-volume-empty-font 		= 2
+bar-volume-empty-foreground 	= ${colors.foreground-alt}
+
+
+[module/alsa]
+type 				= internal/alsa
+
+format-volume 			= <label-volume> <bar-volume>
+label-volume 			= VOL
+label-volume-foreground 	= ${root.foreground}
+format-underline 		= #2e2c2f
+
+format-muted-prefix 		= " "
+format-muted-foreground 	= ${colors.foreground-alt}
+label-muted 			= ICONA
+
+bar-volume-width 		= 20
+bar-volume-foreground-0 	= ${colors.active}
+bar-volume-foreground-1 	= ${colors.active}
+bar-volume-foreground-2 	= ${colors.active}
+bar-volume-foreground-3 	= ${colors.active}
+bar-volume-foreground-4 	= ${colors.active}
+bar-volume-foreground-5 	= #f5a70a
+bar-volume-foreground-6 	= #ff5555
+bar-volume-gradient 		= false
+bar-volume-indicator 		= 
+bar-volume-indicator-font 	= 2
+bar-volume-fill 		= ⁃
+bar-volume-fill-font 		= 2
+bar-volume-empty 		= ⁃
+bar-volume-empty-font 		= 2
+bar-volume-empty-foreground 	= ${colors.foreground-alt}
+
+
+[module/battery]
+type 				= internal/battery
+battery 			= BAT0
+adapter 			= AC0
+full-at 			= 98
+
+format-charging 		= <animation-charging> <label-charging>
+format-charging-underline 	= #ffb52a
+
+format-discharging 		= <animation-discharging> <label-discharging>
+format-discharging-underline	= ${self.format-charging-underline}
+
+format-full-prefix 		= " "
+format-full-prefix-foreground 	= ${colors.foreground-alt}
+format-full-underline 		= ${self.format-charging-underline}
+
+ramp-capacity-0 		= 
+ramp-capacity-1 		= 
+ramp-capacity-2 		= 
+ramp-capacity-foreground 	= ${colors.foreground-alt}
+
+animation-charging-0 		= 
+animation-charging-1 		= 
+animation-charging-2 		= 
+animation-charging-foreground 	= ${colors.foreground-alt}
+animation-charging-framerate 	= 750
+
+animation-discharging-0 	= 
+animation-discharging-1 	= 
+animation-discharging-2 	= 
+animation-discharging-foreground= ${colors.foreground-alt}
+animation-discharging-framerate = 750
+
+
+[module/temperature]
+type 				= internal/temperature
+thermal-zone 			= 0
+warn-temperature 		= 60
+
+format 				= <ramp> <label>
+format-warn 			= <ramp> <label-warn>
+
+label 				= %temperature-c%
+label-warn 			= %temperature-c%
+label-warn-foreground 		= #f0c665
+
+ramp-0 				= 
+ramp-1 				= 
+ramp-2 				= 
+ramo-3				= 
+ramp-foreground 		= ${colors.fg}
+
+
+[module/powermenu]
+type 				= custom/menu
+
+expand-right 			= true
+
+format-spacing 			= 1
+
+label-open 			= 
+label-open-foreground 		= ${colors.fg}
+label-close 			= cancel
+label-close-foreground 		= ${colors.secondary}
+label-separator 		= |
+label-separator-foreground 	= ${colors.foreground-alt}
+
+menu-0-0 			= reboot
+menu-0-0-exec 			= menu-open-1
+menu-0-1 			= power off
+menu-0-1-exec 			= menu-open-2
+
+menu-1-0 			= cancel
+menu-1-0-exec 			= menu-open-0
+menu-1-1 			= reboot
+menu-1-1-exec 			= sudo reboot
+
+menu-2-0 			= power off
+menu-2-0-exec 			= sudo poweroff
+menu-2-1 			= cancel
+menu-2-1-exec 			= menu-open-0
+
+
+[settings]
+screenchange-reload 		= true
+;compositing-background = xor
+compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+
+[global/wm]
+;margin-top 			= 5
+;margin-bottom 			= 5
+
+; vim:ft=dosini

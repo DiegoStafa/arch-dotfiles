@@ -1,0 +1,241 @@
+;==========================================================
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;==========================================================
+
+###########################################################
+#---------------------- VARIABLES ------------------------#
+###########################################################
+
+; 20b2a6
+
+[colors]
+bg 				= #80282828
+fg 				= #ebdbb2
+active 				= #d79921
+ac 				= #BE302F
+mf				= #d0282828
+
+trans 				= #00000000
+white 				= #FFFFFF
+black 				= #000000
+red 				= #e53935
+pink 				= #d81b60
+purple 				= #8e24aa
+deep-purple 			= #5e35b1
+indigo 				= #3949ab
+blue 				= #1e88e5
+light-blue 			= #039be5
+cyan 				= #00acc1
+teal 				= #00897b
+green 				= #43a047
+light-green 			= #7cb342
+lime 				= #c0ca33
+yellow 				= #fdd835
+amber 				= #ffb300
+orange 				= #fb8c00
+deep-orange 			= #f4511e
+brown 				= #6d4c41
+gray 				= #757575
+blue-gray 			= #546e7a
+
+###########################################################
+#---------------------- BAR ------------------------------#
+###########################################################
+
+[bar/mybar]
+monitor				= ${env:MONITOR:eDP1}
+
+font-0 				= "source code pro:size=9;2"
+font-1 				= "Wuncon Siji:size=12;2"
+font-2 				= "xos4 Terminus:size=12;1"
+font-3				= "Roboto:size=10;2"
+
+width				= 100%
+height				= 20
+bottom				= true
+fixed-center			= true
+
+background			= ${colors.bg}
+foreground			= ${colors.fg}
+overline-size			= 0
+underline-size			= 0
+padding				= 0
+;border-top-size		= 1
+;border-top-color		= ${colors.orange}
+
+module-margin-left 		= 1
+module-margin-right 		= 1
+modules-left			= maximizer i3 title
+modules-center			= date
+modules-right			= wttrin temperature pulseaudio xbacklight xkeyboard power
+
+
+
+###########################################################
+#---------------------- MODULES --------------------------#
+###########################################################
+
+[module/i3]
+type 				= internal/i3
+pin-workspace			= true
+index-sort 			= true
+wrapping-scroll 		= false
+format 				= <label-state> <label-mode>
+format-underline		= ${colors.bg}
+format-overline			= ${colors.bg}
+
+; Only show workspaces on the same output as the bar
+label-mode-padding 		= 1
+label-mode-background 		= ${colors.mf}
+
+; Active workspace on focused monitor
+label-focused 			= %index%
+label-focused-background 	= ${colors.mf}
+label-focused-foreground	= ${colors.active}
+label-focused-underline		= ${colors.bg}
+label-focused-padding 		= 1
+
+; Inactive workspace on any monitor
+label-unfocused 		= %index%
+label-unfocused-padding 	= 1
+label-unfocused-background	= ${colors.mf}
+label-unfocused-underline	= ${colors.bg}
+
+; Active workspace on unfocused monitor
+label-visible 			= %index%
+label-visible-background 	= ${self.label-focused-background}
+label-visible-underline 	= ${self.label-focused-underline}
+label-visible-padding 		= ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent 			= %index%
+label-urgent-background 	= ${colors.red}
+label-urgent-padding 		= 1
+
+[module/title]
+type				= internal/xwindow
+format				= <label>
+format-background 		= ${colors.mf}
+format-padding 			= 1
+format-underline		= ${colors.bg}
+format-overline			= ${colors.bg}
+label 				= %title%
+label-maxlen 			= 50
+
+[module/date]
+type 				= internal/date
+interval 			= 5
+time 				= %A %H:%M
+time-alt 			= %d-%m-%Y
+format 				= <label>
+format-background		= ${colors.mf}
+format-padding			= 1
+format-underline		= ${colors.bg}
+format-overline			= ${colors.bg}
+label 				= %time%
+
+[module/wttrin]
+type 				= custom/script
+exec 				= $HOME/scripts/wttr-out
+interval 			= 180
+label 				= %output%
+format 				= <label>
+format-padding			= 1
+format-background 		= ${colors.mf}
+format-underline		= ${colors.bg}
+format-overline			= ${colors.bg}
+click-left 			= alacritty -e fish -c "curl -s wttr.in/Cavarzere; exec fish" &
+click-right			= alacritty -e fish -c "curl -s v2.wttr.in/Cavarzere; exec fish" &
+
+[module/temperature]
+type 				= internal/temperature
+interval 			= 0.5
+thermal-zone 			= 0
+warn-temperature 		= 60
+units 				= true
+format 				= <label>
+format-background 		= ${colors.mf}
+format-padding	 		= 1
+format-underline		= ${colors.bg}
+format-overline			= ${colors.bg}
+format-warn 			= <label-warn>
+format-warn-background 		= ${colors.mf}
+format-warn-padding 		= 1
+format-warn-underline		= ${colors.bg}
+format-warn-overline			= ${colors.bg}
+label 				= TEMP %temperature-c%
+label-warn 			= TEMP %temperature-c%
+label-warn-foreground 		= ${colors.orange}
+
+[module/pulseaudio]
+type 				= internal/pulseaudio
+format-volume 			= VOL <label-volume>
+format-volume-background	= ${colors.mf}
+format-volume-padding 		= 1
+format-volume-underline		= ${colors.bg}
+format-volume-overline			= ${colors.bg}
+format-muted-background 	= ${colors.mf}
+format-muted-padding 		= 1
+format-muted-underline		= ${colors.bg}
+format-muted-overline			= ${colors.bg}
+format-muted-prefix 		= 
+label-muted 			= "MUTED"
+label-muted-foreground 		= ${colors.gray}
+
+[module/xbacklight]
+type 				= internal/xbacklight
+card 				= intel_backlight
+format 				= LGT <label>
+format-background 		= ${colors.mf}
+format-padding 			= 1
+format-underline		= ${colors.bg}
+format-overline			= ${colors.bg}
+label 				= %percentage%%
+
+[module/xkeyboard]
+type				= internal/xkeyboard
+blacklist-0 			= num lock
+blacklist-1		 	= scroll lock
+format 				= <label-indicator>
+format-background 		= ${colors.mf}
+format-padding 			= 1
+format-underline		= ${colors.bg}
+format-overline			= ${colors.bg}
+label-indicator-on 		= %name%
+label-indicator-foreground 	= ${colors.ac}
+
+[module/power]
+type 				= custom/text
+content				= "SYS"
+content-padding			= 1
+content-background 		= ${colors.mf}
+click-left 			= $HOME/scripts/powermenu
+
+[module/maximizer]
+type 				= custom/script
+exec 				= "wc -l < /tmp/minim_list"
+interval 			= 0.5
+label 				= "%output% _-"
+format 				= <label>
+format-padding			= 1
+format-background 		= ${colors.mf}
+format-underline		= ${colors.bg}
+format-overline			= ${colors.bg}
+click-left 			= "$HOME/scripts/maxim"
+click-right			= "$HOME/scripts/minim"
+
+[settings]
+screenchange-reload 		= true
+compositing-background 		= source
+compositing-foreground		= source
+
+[global/wm]
+margin-top			= 0
+margin-bottom			= 0
