@@ -230,6 +230,7 @@ format-underline		= ${colors.bg}
 format-overline			= ${colors.bg}
 click-left 			= "$HOME/scripts/maxim"
 click-right			= "$HOME/scripts/minim"
+double-click-left		= "$HOME/scripts/maxim -pop"
 
 [settings]
 screenchange-reload 		= true
