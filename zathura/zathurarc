@@ -1,6 +1,14 @@
 set selection-clipboard "clipboard"
+
+set default-bg "#282828"
 set recolor "true"
 set recolor-lightcolor "#282828"
+set statusbar-bg "#1d2021"
+set statusbar-fg "#ebdbb2"
+set inputbar-bg "#1d2021"
+set inputbar-fg "#ebdbb2"
+
 set page-padding 0
-set guioptions none
+set font "source code pro 9"
+
 map <A-s> toggle_statusbar

@@ -1,6 +1,5 @@
 configuration {
 	modi: "drun,run,window,clipboard:greenclip print";
-	matching: "fuzzy";
 	width: 40;
 	lines: 15;
 	columns: 1;
@@ -16,12 +15,12 @@ configuration {
 	hide-scrollbar: true;
 	dpi: 96;
 	show-match: false;
-	
+	drun-match-fields: "name,categories";
 	// 
-	color-normal: "#001b2b34, #fff8f8f2, #001b2b34, #ff468588, #ff000000";
+	color-normal: "#001b2b34, #fff8f8f2, #001b2b34, #ff98971a, #ff000000";
 	color-urgent: "#ff373737, #ffdc322f, #ff373737, #ffdc322f, #fff8f8f2";
-	color-active: "#001b2b34, #fff8f8f2, #001b2b34, #ff468588, #ff000000";
-	color-window: "#f0282828, #60468588, #00f8f8f2";
+	color-active: "#001b2b34, #fff8f8f2, #001b2b34, #ff98971a, #ff000000";
+	color-window: "#f01d2021, #6098971a, #00f8f8f2";
 
 	kb-mode-next: "Super+Right,Tab";
 	kb-mode-previous: "Super+Left,Ctrl+Tab";
