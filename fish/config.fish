@@ -1,5 +1,6 @@
 export PATH=/bin:/home/diego/scripts
 
+
 set EDITOR nvim
 set VISUAL code
 
@@ -12,7 +13,7 @@ alias df="df -h"
 alias du="du -h"
 
 alias colorpicker="colorpicker 2> /dev/null"
-alias yt-a="youtube-dlc -f bestaudio --no-playlist (xclip -o)"
+alias yt-a="youtube-dl -f bestaudio --no-playlist (xclip -o)"
 
 alias pdf="zathura"
 alias bt="sudo bluetoothctl"

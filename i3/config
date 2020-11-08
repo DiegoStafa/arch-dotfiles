@@ -1,13 +1,13 @@
 # ------------------------ APPEARANCE -----------------------#
 
 for_window [class="^.*"] 		border pixel 1
-font pango:				monospace 0
+font pango:						monospace 0
 
-# window colours: 			border    bg        text      
-client.focused 				#ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
+# window colours: 				border    bg        text      
+client.focused 					#808080 #808080 #808080 #808080 #808080
 client.focused_inactive			#282828 #282828 #282828 #282828 #282828
-client.unfocused			#282828 #282828 #282828 #282828 #282828
-client.urgent				#282828 #282828 #282828 #282828 #282828
+client.unfocused				#282828 #282828 #282828 #282828 #282828
+client.urgent					#282828 #282828 #282828 #282828 #282828
 
 hide_edge_borders smart
 
@@ -15,21 +15,21 @@ hide_edge_borders smart
 set 	$inner_gaps 			0
 set 	$outer_gaps 			0
 
-gaps 	inner 				$inner_gaps
-gaps 	outer				$outer_gaps
+gaps 	inner 					$inner_gaps
+gaps 	outer					$outer_gaps
 
 # gaps mode
 set 	$mode_gaps_out			mode gaps: OUT
 set 	$mode_gaps_in 			mode gaps: IN
 
-bindsym $mod+KP_Add			gaps inner current	plus 	10;		gaps outer current 	plus 	10
-bindsym $mod+KP_Subtract		gaps inner current	minus 	10;		gaps outer current 	minus 	10
-bindsym $mod+End			gaps inner current	set 	0;		gaps outer current 	set 	0
+bindsym $mod+KP_Add				gaps inner current	plus 	10;				gaps outer current 	plus 	10
+bindsym $mod+KP_Subtract		gaps inner current	minus 	10;				gaps outer current 	minus 	10
+bindsym $mod+End				gaps inner current	set 	0;				gaps outer current 	set 	0
 bindsym $mod+KP_Enter			gaps inner current	set 	$inner_gaps;	gaps outer current 	set 	$outer_gaps
 
-bindsym $mod+Shift+KP_Add		gaps inner all		plus 	10;		gaps outer all		plus 	10
-bindsym $mod+Shift+KP_Subtract		gaps inner all		minus 	10;		gaps outer all		minus 	10
-bindsym $mod+Shift+End			gaps inner all		set 	0;		gaps outer all		set 	0
+bindsym $mod+Shift+KP_Add		gaps inner all		plus 	10;				gaps outer all		plus 	10
+bindsym $mod+Shift+KP_Subtract	gaps inner all		minus 	10;				gaps outer all		minus 	10
+bindsym $mod+Shift+End			gaps inner all		set 	0;				gaps outer all		set 	0
 bindsym $mod+Shift+KP_Enter		gaps inner all		set 	$inner_gaps;	gaps outer all		set 	$outer_gaps
 
 bindsym $mod+Shift+i 			mode "$mode_gaps_in"
@@ -37,212 +37,211 @@ bindsym $mod+Shift+o			mode "$mode_gaps_out"
 
 mode "$mode_gaps_out" 
 {
-        bindsym KP_Add			gaps outer current	plus	5
+        bindsym KP_Add				gaps outer current	plus	5
         bindsym KP_Subtract 		gaps outer current 	minus	5
-        bindsym End  	 		gaps outer current 	set	0
-	bindsym KP_Enter		gaps outer current	set 	$outer_gaps
+        bindsym End  	 			gaps outer current 	set	0
+		bindsym KP_Enter			gaps outer current	set 	$outer_gaps
  
         bindsym Shift+KP_Add		gaps outer all		plus	5
         bindsym Shift+KP_Subtract 	gaps outer all 		minus	5
-        bindsym Shift+End		gaps outer all 		set	0
-	bindsym Shift+KP_Enter		gaps outer all		set 	$outer_gaps
+        bindsym Shift+End			gaps outer all 		set	0
+		bindsym Shift+KP_Enter		gaps outer all		set 	$outer_gaps
         
-	bindsym Escape			mode "default"
+		bindsym Escape				mode "default"
 }
 
 mode "$mode_gaps_in" 
 {
-        bindsym KP_Add			gaps inner current	plus	5
+        bindsym KP_Add				gaps inner current	plus	5
         bindsym KP_Subtract 		gaps inner current 	minus	5
-        bindsym End	   		gaps inner current 	set	0
-	bindsym KP_Enter		gaps inner current	set 	$inner_gaps
+        bindsym End	   				gaps inner current 	set	0
+		bindsym KP_Enter			gaps inner current	set 	$inner_gaps
 
         bindsym Shift+KP_Add		gaps inner all		plus	5
         bindsym Shift+KP_Subtract 	gaps inner all 		minus	5
-        bindsym Shift+End		gaps inner all 		set	0
-	bindsym Shift+KP_Enter		gaps inner all		set	$inner_gaps
+        bindsym Shift+End			gaps inner all 		set	0
+		bindsym Shift+KP_Enter		gaps inner all		set	$inner_gaps
 	
-	bindsym Escape 			mode "default"
+		bindsym Escape 				mode "default"
 }
 
 # --------------------- wm keybind -------------------------#
 
 # drag floating windows
-floating_modifier		$mod
+floating_modifier				$mod
  
 # tiling / floating
-bindsym $mod+Shift+space	floating toggle
+bindsym $mod+Shift+space		floating toggle
 
 # orientation
-bindsym $mod+h			split h
-bindsym $mod+v			split v
+bindsym $mod+h					split h
+bindsym $mod+v					split v
 
-bindsym $mod+Shift+w		split h, layout tabbed
+bindsym $mod+Shift+w			split h, layout tabbed
 
 # layout
-bindsym $mod+s			layout stacking
-bindsym $mod+w			layout tabbed
-bindsym $mod+e			layout toggle split
+bindsym $mod+s					layout stacking
+bindsym $mod+w					layout tabbed
+bindsym $mod+e					layout toggle split
 
 # focus
-bindsym $mod+Left 		focus left
-bindsym $mod+Down 		focus down
-bindsym $mod+Up 		focus up
-bindsym $mod+Right 		focus right
+bindsym $mod+Left 				focus left
+bindsym $mod+Down 				focus down
+bindsym $mod+Up 				focus up
+bindsym $mod+Right 				focus right
 
-bindsym $mod+a			focus parent
+bindsym $mod+a					focus parent
 
 # move window
-bindsym $mod+Shift+Left		move left
-bindsym $mod+Shift+Down		move down
-bindsym $mod+Shift+Up		move up
-bindsym $mod+Shift+Right	move right
+bindsym $mod+Shift+Left			move left
+bindsym $mod+Shift+Down			move down
+bindsym $mod+Shift+Up			move up
+bindsym $mod+Shift+Right		move right
 
 # kill focused window
-bindsym $mod+Shift+q		kill
+bindsym $mod+Shift+q			kill
 
 # fullscreen
-bindsym $mod+f			fullscreen toggle
+bindsym $mod+f					fullscreen toggle
 
 # resize window
-bindsym $mod+r 			mode "resize mode"
+bindsym $mod+r 					mode "resize mode"
 
 mode "resize mode"
 {
-        bindsym Right		resize grow 	width 	10 px or 10 ppt
-        bindsym Up 		resize shrink 	height 	10 px or 10 ppt
-        bindsym Down 		resize grow 	height 	10 px or 10 ppt
-        bindsym Left 		resize shrink 	width 	10 px or 10 ppt
-
+        bindsym Right			resize grow 	width 	10 px or 10 ppt
+        bindsym Up 				resize shrink 	height 	10 px or 10 ppt
+        bindsym Down 			resize grow 	height 	10 px or 10 ppt
+        bindsym Left 			resize shrink 	width 	10 px or 10 ppt
+		
         # back to normal
-        bindsym Return 		mode "default"
-        bindsym Escape 		mode "default"
-        bindsym $mod+r 		mode "default"
+        bindsym Return 			mode "default"
+        bindsym Escape 			mode "default"
+        bindsym $mod+r 			mode "default"
 }
 
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 					workspace 1
+bindsym $mod+2 					workspace 2
+bindsym $mod+3 					workspace 3
+bindsym $mod+4 					workspace 4
+bindsym $mod+5 					workspace 5
+bindsym $mod+6 					workspace 6
+bindsym $mod+7 					workspace 7
+bindsym $mod+8 					workspace 8
+bindsym $mod+9 					workspace 9
+bindsym $mod+0 					workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 			move container to workspace 1
+bindsym $mod+Shift+2 			move container to workspace 2
+bindsym $mod+Shift+3			move container to workspace 3
+bindsym $mod+Shift+4 			move container to workspace 4
+bindsym $mod+Shift+5 			move container to workspace 5
+bindsym $mod+Shift+6 			move container to workspace 6
+bindsym $mod+Shift+7 			move container to workspace 7
+bindsym $mod+Shift+8 			move container to workspace 8
+bindsym $mod+Shift+9 			move container to workspace 9
+bindsym $mod+Shift+0 			move container to workspace 10
 
-bindsym $mod+Tab 		workspace next
-bindstm $mod+less		back_and_forth
-bindsym $mod+Control+Left 	workspace prev
-bindsym $mod+Control+Right 	workspace next
+bindsym $mod+Tab 				workspace next
+bindstm $mod+less				back_and_forth
+bindsym $mod+Control+Left 		workspace prev
+bindsym $mod+Control+Right 		workspace next
 
-bindsym $mod+KP_End   exec --no-startup-id "$scripts/movetocorner 1"
-bindsym $mod+KP_Down  exec --no-startup-id "$scripts/movetocorner 2"
-bindsym $mod+KP_Next  exec --no-startup-id "$scripts/movetocorner 3"
-bindsym $mod+KP_Left  exec --no-startup-id "$scripts/movetocorner 4"
-bindsym $mod+KP_Begin exec --no-startup-id "$scripts/movetocorner 5"
-bindsym $mod+KP_Right exec --no-startup-id "$scripts/movetocorner 6"
-bindsym $mod+KP_Home  exec --no-startup-id "$scripts/movetocorner 7"
-bindsym $mod+KP_Up    exec --no-startup-id "$scripts/movetocorner 8"
-bindsym $mod+KP_Prior exec --no-startup-id "$scripts/movetocorner 9"
+bindsym $mod+KP_End   			exec --no-startup-id "$scripts/movetocorner 1"
+bindsym $mod+KP_Down  			exec --no-startup-id "$scripts/movetocorner 2"
+bindsym $mod+KP_Next  			exec --no-startup-id "$scripts/movetocorner 3"
+bindsym $mod+KP_Left  			exec --no-startup-id "$scripts/movetocorner 4"
+bindsym $mod+KP_Begin			exec --no-startup-id "$scripts/movetocorner 5"
+bindsym $mod+KP_Right			exec --no-startup-id "$scripts/movetocorner 6"
+bindsym $mod+KP_Home			exec --no-startup-id "$scripts/movetocorner 7"
+bindsym $mod+KP_Up  			exec --no-startup-id "$scripts/movetocorner 8"
+bindsym $mod+KP_Prior			exec --no-startup-id "$scripts/movetocorner 9"
 
 # ---------------- startup programs --------------------
 #
-exec --no-startup-id "picom"
-exec --no-startup-id "redshift"
-exec --no-startup-id "$HOME/.config/feh/.fehbg"
-exec --no-startup-id "polybar mybar"
-exec --no-startup-id "touch /tmp/minim_list"
-exec --no-startup-id "greenclip daemon"
+exec --no-startup-id 			"picom --experimental-backends"
+exec --no-startup-id 			"redshift"
+exec --no-startup-id 			"$HOME/.config/feh/.fehbg"
+exec --no-startup-id 			"polybar mybar"
+exec --no-startup-id 			"greenclip daemon"
+exec --no-startup-id 			"touch /tmp/minim_list"
+exec --no-startup-id 			"touch /tmp/isRecording"
+exec --no-startup-id			"python -m http.server 2000 --directory $HOME/public"
 
 # ---------------- personal keybinds -------------------
 
-bindsym $mod+Return		exec --no-startup-id "alacritty"
-bindsym $mod+Shift+Return	exec --no-startup-id "alacritty --class _scratchpad"
+bindsym $mod+Return				exec --no-startup-id "alacritty"
+bindsym $mod+Shift+Return		exec --no-startup-id "alacritty --class _scratchpad"
 
 
-bindsym $mod+F1			exec --no-startup-id ""
-bindsym $mod+F2			exec --no-startup-id ""
-bindsym $mod+F3			exec --no-startup-id ""
-bindsym $mod+F4			exec --no-startup-id "chromium --app='https://4chan.org'"
-bindsym $mod+F5			exec --no-startup-id "speedcrunch"
-bindsym $mod+F6			exec --no-startup-id "kolourpaint"
-bindsym $mod+F7			exec --no-startup-id ""
-bindsym $mod+F8			exec --no-startup-id ""
-bindsym $mod+F9			exec --no-startup-id ""
-bindsym $mod+F10		exec --no-startup-id ""
-bindsym $mod+F11		exec --no-startup-id ""
-bindsym $mod+F12		exec --no-startup-id ""
+bindsym $mod+F1					exec --no-startup-id ""
+bindsym $mod+F2					exec --no-startup-id ""
+bindsym $mod+F3					exec --no-startup-id ""
+bindsym $mod+F4					exec --no-startup-id "chromium --app='https://4chan.org'"
+bindsym $mod+F5					exec --no-startup-id "speedcrunch"
+bindsym $mod+F6					exec --no-startup-id "kolourpaint"
+bindsym $mod+F7					exec --no-startup-id ""
+bindsym $mod+F8					exec --no-startup-id ""
+bindsym $mod+F9					exec --no-startup-id ""
+bindsym $mod+F10				exec --no-startup-id ""
+bindsym $mod+F11				exec --no-startup-id ""
+bindsym $mod+F12				exec --no-startup-id ""
 
-bindsym $mod+d			exec --no-startup-id "rofi -show drun"
-bindsym $mod+c 			exec --no-startup-id "rofi -show clipboard"
-bindsym $mod+backslash		exec --no-startup-id "rofi -show window"
-bindsym $mod+Shift+b		exec --no-startup-id "rofi-bluetooth"
+bindsym $mod+d					exec --no-startup-id "rofi -show drun"
+bindsym $mod+c 					exec --no-startup-id "rofi -show clipboard"
+bindsym $mod+backslash			exec --no-startup-id "rofi -show window"
+bindsym $mod+Shift+b			exec --no-startup-id "rofi-bluetooth"
 
-bindsym $mod+period 		exec --no-startup-id "$scripts/floating-toggle terminal"
-bindsym $mod+b 			exec --no-startup-id "$scripts/floating-toggle bluetoothctl"
-bindsym $mod+n 			exec --no-startup-id "$scripts/floating-toggle newsboat"
-bindsym $mod+m 			exec --no-startup-id "$scripts/floating-toggle cmus"
-bindsym $mod+Menu		exec --no-startup-id "$scripts/floating-toggle vim + /home/diego/Desktop/notes"
-bindsym $mod+KP_Divide		exec --no-startup-id "$scripts/floating-toggle ranger"
+bindsym $mod+period 			exec --no-startup-id "$scripts/floating-toggle terminal"
+bindsym $mod+b 					exec --no-startup-id "$scripts/floating-toggle bluetoothctl"
+bindsym $mod+n 					exec --no-startup-id "$scripts/floating-toggle newsboat"
+bindsym $mod+m 					exec --no-startup-id "$scripts/floating-toggle cmus"
+bindsym $mod+Menu				exec --no-startup-id "$scripts/floating-toggle vim + /home/diego/Desktop/notes"
+bindsym $mod+KP_Divide			exec --no-startup-id "$scripts/floating-toggle ranger"
 
-bindsym $mod+Home		exec --no-startup-id "$scripts/maxim"
-bindsym $mod+Prior		exec --no-startup-id "$scripts/maxim -pop"
-bindsym $mod+Next		exec --no-startup-id "$scripts/minim"
+bindsym $mod+Home				exec --no-startup-id "$scripts/maxim"
+bindsym $mod+Prior				exec --no-startup-id "$scripts/maxim -pop"
+bindsym $mod+Next				exec --no-startup-id "$scripts/minim"
+		
+bindsym $mod+BackSpace			exec --no-startup-id "$scripts/capture-tools"
+bindsym $mod+Shift+BackSpace	exec --no-startup-id "$scripts/capture-tools -menu"
 
-bindsym $mod+BackSpace		exec --no-startup-id "$scripts/screenshot"
-bindsym $mod+Shift+BackSpace	exec --no-startup-id "$scripts/screenshot -menu"
+bindsym $mod+Escape				exec --no-startup-id "$scripts/powermenu"
+bindsym $mod+Alt_L				exec --no-startup-id "$scripts/polybar-toggle"
 
-bindsym $mod+Escape		exec --no-startup-id "$scripts/powermenu"
-bindsym $mod+Alt_L		exec --no-startup-id "$scripts/polybar-toggle"
+bindsym $mod+Shift+k			exec --no-startup-id "$scripts/kill-workspace"
 
-bindsym $mod+Shift+k		exec --no-startup-id "$scripts/kill-workspace"
+bindsym $mod+minus 				scratchpad show
+bindsym $mod+comma 				sticky toggle
+bindsym $mod+Shift+minus 		move scratchpad
 
-bindsym $mod+minus scratchpad show
-bindsym $mod+Shift+minus move scratchpad
-
-for_window [class="Thunar"] floating enable, resize set 900 600, move position center
-
-for_window [instance="_scratchpad"] floating enable, move scratchpad, scratchpad show
-for_window [title="Event Tester"] floating enable, resize set 200 200
-
-for_window [title="newsboat"] resize set 900 600, move position center
-for_window [title="ranger"] resize set 1366 500, move position center
-for_window [title="cmus"] resize set 800 600, move position center
-for_window [title="terminal"] resize set 600 400, move position center
-
-for_window [floating] move position center
-
-for_window [title="bluetoothctl"] resize set 440 120, move position 463 628
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute 		exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle
+bindsym XF86AudioMute 			exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp 	exec --no-startup-id xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown 	exec --no-startup-id xbacklight -dec 5 # decrease screen brightness
 
-bindsym XF86ScreenSaver 	exec --no-startup-id xset dpms force off
+bindsym XF86ScreenSaver 		exec --no-startup-id xset dpms force off
 
 bindsym $mod+Shift+C reload
 bindsym $mod+Shift+r restart
 
+for_window [class="Thunar"] floating enable, resize set 900 600, move position center
+for_window [instance="_scratchpad"] floating enable, move scratchpad, scratchpad show
+for_window [title="Event Tester"] floating enable, resize set 200 200
+for_window [title="newsboat"] resize set 900 600, move position center
+for_window [title="ranger"] resize set 1366 500, move position center
+for_window [title="cmus"] resize set 800 600, move position center
+for_window [title="terminal"] resize set 600 400, move position center
+for_window [floating] move position center
+for_window [title="bluetoothctl"] resize set 440 120, move position 463 628
 
 for_window [urgent="latest"] focus
 focus_follows_mouse no

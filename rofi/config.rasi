@@ -1,10 +1,9 @@
 configuration {
 	modi: "drun,run,window,clipboard:greenclip print";
-	width: 40;
-	lines: 15;
+	width: 34;
+	lines: 11;
 	columns: 1;
-	font: "Cantarell 9";
-	show-icons: false;
+	font: "Terminus (TTF) 9";
 	terminal: "alacritty";
 	ssh-client: "ssh";
 	ssh-command: "{terminal} -e {ssh-client} {host}";
@@ -17,14 +16,15 @@ configuration {
 	dpi: 96;
 	show-match: false;
 	drun-match-fields: "name,categories";
-	line-margin: 2;
-	line-padding: 2;
+	line-margin: 0;
+	line-padding: 6;
+	padding:0;
 
 	// 
-	color-normal: "#001b2b34, #fff8f8f2, #001b2b34, #ff98971a, #ff000000";
-	color-urgent: "#ff373737, #ffdc322f, #ff373737, #ffdc322f, #fff8f8f2";
-	color-active: "#001b2b34, #fff8f8f2, #001b2b34, #ff98971a, #ff000000";
-	color-window: "#e81d2021, #6098971a, #00f8f8f2";
+	color-normal: "#001b2b34, #ffebdbb2, #001b2b34, #ff689d6a, #ff000000";
+	color-urgent: "#ff373737, #ffdc322f, #ff373737, #ffdc322f, #ffebdbb2";
+	color-active: "#001b2b34, #ffebdbb2, #001b2b34, #ff689d6a, #ff000000";
+	color-window: "#e8282828, #60689d6a, #00ebdbb2";
 
 	kb-mode-next: "Super+Right,Tab";
 	kb-mode-previous: "Super+Left,Ctrl+Tab";
