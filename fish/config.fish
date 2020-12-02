@@ -9,6 +9,12 @@ alias la="exa -a"
 alias lt="exa -T"
 alias ll="exa -l"
 
+alias i3-conf="nvim $HOME/.config/i3/config"
+alias polybar-conf="nvim $HOME/.config/polybar/config"
+alias picom-conf="nvim $HOME/.config/picom/picom.conf"
+alias rofi-conf="nvim $HOME/.config/rofi/config.rasi"
+alias alacritty-conf="nvim $HOME/.config/alacritty/alacritty.yml"
+
 alias df="df -h"
 alias du="du -h"
 
@@ -19,3 +25,4 @@ alias pdf="zathura"
 alias bt="sudo bluetoothctl"
 
 alias stream="streamlink -p mpv (xclip -o)"
+

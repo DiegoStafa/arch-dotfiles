@@ -1,15 +1,13 @@
 configuration {
 	modi: "drun,run,window,clipboard:greenclip print";
-	width: 34;
+	width: 33;
 	lines: 11;
 	columns: 1;
-	font: "Terminus (TTF) 9";
+	font: "Segoe UI 9";
 	terminal: "alacritty";
-	ssh-client: "ssh";
-	ssh-command: "{terminal} -e {ssh-client} {host}";
 	run-command: "{cmd}";
 	run-shell-command: "{terminal} --hold -e fish -c "{cmd}; exec fish" &";
-	icon-theme: "oomox-gruvbox-dark";
+	icon-theme: "Suru++ 25 Dark";
 	show-icons: false;
 	separator-style: "solid";
 	hide-scrollbar: true;
@@ -17,14 +15,14 @@ configuration {
 	show-match: false;
 	drun-match-fields: "name,categories";
 	line-margin: 0;
-	line-padding: 6;
+	line-padding: 5;
 	padding:0;
 
 	// 
-	color-normal: "#001b2b34, #ffebdbb2, #001b2b34, #ff689d6a, #ff000000";
-	color-urgent: "#ff373737, #ffdc322f, #ff373737, #ffdc322f, #ffebdbb2";
-	color-active: "#001b2b34, #ffebdbb2, #001b2b34, #ff689d6a, #ff000000";
-	color-window: "#e8282828, #60689d6a, #00ebdbb2";
+	color-normal: "#001b2b34, #fff8f8f2, #001b2b34, #74243e, #fff8f8f2";
+	color-urgent: "#ff373737, #ffdc322f, #ff373737, #ffdc322f, #fff8f8f2";
+	color-active: "#001b2b34, #fff8f8f2, #001b2b34, #74243e, #fff8f8f2";
+	color-window: "#e5272822, #74243e, #00ffffff";
 
 	kb-mode-next: "Super+Right,Tab";
 	kb-mode-previous: "Super+Left,Ctrl+Tab";

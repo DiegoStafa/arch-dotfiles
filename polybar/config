@@ -6,11 +6,11 @@
 ; f92672
 
 [colors]
-bg 							= #ff282828
-fg 							= #ebdbb2
+bg 							= #b0151515
+fg 							= #ffffff
 active 						= #56adbc
 ac 							= #BE302F
-mf							= #ff282828
+mf							= #b0151515
 
 trans 						= #00000000
 white 						= #FFFFFF
@@ -43,10 +43,11 @@ blue-gray 					= #546e7a
 label-unfocused-foreground	= #90ebdbb2
 monitor						= ${env:MONITOR:eDP1}
 
-font-0 						= "Misc Tamsyn:size=13;2"
+font-0 						= "sf mono:size=8;2"
 font-1 						= "Wuncon Siji:size=12;2"
 font-2 						= "xos4 Terminus:size=12;1"
 font-3						= "Roboto:size=10;2"
+font-4 						= "ipapgothic:size=10;3"
 
 width						= 100%
 height						= 20
@@ -61,8 +62,6 @@ padding						= 0
 ;border-top-size			= 1
 ;border-top-color			= ${colors.orange}
 
-module-margin-left 			= 1
-module-margin-right 		= 1
 modules-left				= maximizer i3 title
 modules-center				= date
 modules-right				= wttrin temperature pulseaudio xbacklight xkeyboard power
@@ -73,6 +72,19 @@ modules-right				= wttrin temperature pulseaudio xbacklight xkeyboard power
 #---------------------- MODULES --------------------------#
 ###########################################################
 
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+reverse-scroll = false
+format 						= <label-state> <label-mode>
+format-underline			= ${colors.bg}
+format-overline				= ${colors.bg}
+#label-focused 				= %index%
+label-focused-background 	= ${colors.mf}
+label-focused-foreground	= ${colors.active}
+label-focused-underline		= ${colors.bg}
+
+
 [module/i3]
 type 						= internal/i3
 pin-workspace				= true
@@ -82,31 +94,42 @@ format 						= <label-state> <label-mode>
 format-underline			= ${colors.bg}
 format-overline				= ${colors.bg}
 
+ws-icon-0 = 10;十
+ws-icon-1 = 1;一
+ws-icon-2 = 2;二
+ws-icon-3 = 3;三
+ws-icon-4 = 4;四
+ws-icon-5 = 5;五
+ws-icon-6 = 6;六
+ws-icon-7 = 7;七
+ws-icon-8 = 8;八
+ws-icon-9 = 9;九
+
 ; Only show workspaces on the same output as the bar
 label-mode-padding 			= 1
 label-mode-background 		= ${colors.mf}
 
 ; Active workspace on focused monitor
-label-focused 				= %index%
+label-focused 				= %icon%
 label-focused-background 	= ${colors.mf}
 label-focused-foreground	= ${colors.active}
 label-focused-underline		= ${colors.bg}
 label-focused-padding 		= 1
 
 ; Inactive workspace on any monitor
-label-unfocused 			= %index%
+label-unfocused 			= %icon%
 label-unfocused-padding 	= 1
 label-unfocused-background	= ${colors.mf}
 label-unfocused-underline	= ${colors.bg}
 
 ; Active workspace on unfocused monitor
-label-visible 				= %index%
+label-visible 				= %icon%
 label-visible-background 	= ${self.label-focused-background}
 label-visible-underline 	= ${self.label-focused-underline}
 label-visible-padding 		= ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent 				= %index%
+label-urgent 				= %icon%
 label-urgent-background 	= ${colors.red}
 label-urgent-padding 		= 1
 
