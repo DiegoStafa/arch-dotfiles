@@ -204,6 +204,7 @@ bindsym $mod+Next				exec --no-startup-id "$scripts/minim"
 		
 bindsym $mod+BackSpace			exec --no-startup-id "$scripts/capture-tools"
 bindsym $mod+Shift+BackSpace	exec --no-startup-id "$scripts/capture-tools -menu"
+bindsym $mod+Shift+Pause		exec --no-startup-id "killall ffmpeg"
 
 bindsym $mod+Escape				exec --no-startup-id "$scripts/powermenu"
 bindsym $mod+Alt_L				exec --no-startup-id "$scripts/polybar-toggle"
