@@ -1,6 +1,7 @@
 # ------------------------ APPEARANCE -----------------------#
 
 for_window [class="^.*"] 		border pixel 1
+#for_window [floating]	 		border pixel 0
 font pango:						monospace 0
 
 # window colours: 				border    bg        text      
@@ -188,14 +189,14 @@ bindsym $mod+F6					exec --no-startup-id "drawing"
 
 bindsym $mod+d					exec --no-startup-id "rofi -show drun"
 bindsym $mod+c 					exec --no-startup-id "rofi -show clipboard"
-bindsym $mod+backslash			exec --no-startup-id "rofi -show window"
+bindsym $mod+space				exec --no-startup-id "rofi -show window"
 bindsym $mod+Shift+b			exec --no-startup-id "rofi-bluetooth"
 
 bindsym $mod+period 			exec --no-startup-id "$scripts/floating-toggle terminal"
 bindsym $mod+b 					exec --no-startup-id "$scripts/floating-toggle bluetoothctl"
 bindsym $mod+n 					exec --no-startup-id "$scripts/floating-toggle newsboat"
 bindsym $mod+m 					exec --no-startup-id "$scripts/floating-toggle cmus"
-bindsym $mod+Menu				exec --no-startup-id "$scripts/floating-toggle vim + /home/diego/Desktop/notes"
+bindsym $mod+Menu				exec --no-startup-id "$scripts/floating-toggle nvim /home/diego/Desktop/notes"
 bindsym $mod+KP_Divide			exec --no-startup-id "$scripts/floating-toggle ranger"
 
 bindsym $mod+Home				exec --no-startup-id "$scripts/maxim"

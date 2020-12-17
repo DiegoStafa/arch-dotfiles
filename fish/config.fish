@@ -4,6 +4,8 @@ export PATH=/bin:/home/diego/scripts
 set EDITOR nvim
 set VISUAL code
 
+alias audio-visualizer="cava"
+
 alias ls="exa" 
 alias la="exa -a"
 alias lt="exa -T"

@@ -8,7 +8,6 @@ set statusbar-fg "#ebdbb2"
 set inputbar-bg "#1d2021"
 set inputbar-fg "#ebdbb2"
 
-set page-padding 0
-set font "source code pro 9"
+set font "sf mono 9"
 
 map <A-s> toggle_statusbar

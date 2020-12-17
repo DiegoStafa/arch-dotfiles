@@ -3,7 +3,7 @@ configuration {
 	width: 33;
 	lines: 11;
 	columns: 1;
-	font: "Segoe UI 9";
+	font: "liberation mono 8";
 	terminal: "alacritty";
 	run-command: "{cmd}";
 	run-shell-command: "{terminal} --hold -e fish -c "{cmd}; exec fish" &";
@@ -19,10 +19,10 @@ configuration {
 	padding:0;
 
 	// 
-	color-normal: "#001b2b34, #fff8f8f2, #001b2b34, #74243e, #fff8f8f2";
-	color-urgent: "#ff373737, #ffdc322f, #ff373737, #ffdc322f, #fff8f8f2";
-	color-active: "#001b2b34, #fff8f8f2, #001b2b34, #74243e, #fff8f8f2";
-	color-window: "#e5272822, #74243e, #00ffffff";
+	color-normal: "#00000000, #ff83a598, #00000000, #a083a598, #ffebdbb2";
+	color-urgent: "#ff373737, #ffdc322f, #ff373737, #ffdc322f, #ffebdbb2";
+	color-active: "#00000000, #ff83a598, #00000000, #a083a598, #ffebdbb2";
+	color-window: "#e5282828, #a083a598, #00000000";
 
 	kb-mode-next: "Super+Right,Tab";
 	kb-mode-previous: "Super+Left,Ctrl+Tab";
