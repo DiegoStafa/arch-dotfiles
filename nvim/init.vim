@@ -7,6 +7,7 @@ set foldmethod=marker
 set clipboard+=unnamedplus
 set tabstop=4
 set shiftwidth=4
+set title
 
 hi VertSplit ctermbg=white ctermfg=black
 let g:NERDTreeWinSize=20

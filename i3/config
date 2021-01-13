@@ -1,4 +1,4 @@
-# ------------------------ APPEARANCE -----------------------#
+# ------------------------ APPEARANCE ----------------------- #
 
 for_window [class="^.*"] 		border pixel 1
 #for_window [floating]	 		border pixel 0
@@ -66,7 +66,7 @@ mode "$mode_gaps_in"
 		bindsym Escape 				mode "default"
 }
 
-# --------------------- wm keybind -------------------------#
+# --------------------- wm keybind ------------------------- #
 
 # drag floating windows
 floating_modifier				$mod
@@ -159,16 +159,17 @@ bindsym $mod+KP_Home			exec --no-startup-id "$scripts/xmovecorner 7"
 bindsym $mod+KP_Up  			exec --no-startup-id "$scripts/xmovecorner 8"
 bindsym $mod+KP_Prior			exec --no-startup-id "$scripts/xmovecorner 9"
 
-# ---------------- startup programs --------------------
-#
+# ---------------- startup programs -------------------- #
+
+exec --no-startup-id 			"polybar mybar"
 exec --no-startup-id 			"picom --experimental-backends"
 exec --no-startup-id 			"redshift"
-exec --no-startup-id 			"polybar mybar"
 exec --no-startup-id 			"greenclip daemon"
 exec --no-startup-id 			"touch /tmp/minim_list"
 exec --no-startup-id			"python -m http.server 2000 --directory $HOME/public"
+exec --no-startup-id			"feh --recursive --bg-fill --randomize ~/images/wallpapers/"
 
-# ---------------- personal keybinds -------------------
+# ---------------- user keybinds ----------------------- #
 
 bindsym $mod+Return				exec --no-startup-id "alacritty"
 bindsym $mod+Shift+Return		exec --no-startup-id "alacritty -t termspawn --class _scratchpad"
@@ -190,7 +191,6 @@ bindsym $mod+F6					exec --no-startup-id "drawing"
 bindsym $mod+d					exec --no-startup-id "rofi -show drun"
 bindsym $mod+c 					exec --no-startup-id "rofi -show clipboard"
 bindsym $mod+space				exec --no-startup-id "rofi -show window"
-bindsym $mod+Shift+b			exec --no-startup-id "rofi-bluetooth"
 
 bindsym $mod+period 			exec --no-startup-id "$scripts/floating-toggle terminal"
 bindsym $mod+b 					exec --no-startup-id "$scripts/floating-toggle bluetoothctl"
@@ -237,11 +237,12 @@ for_window [title="Event Tester"] floating enable, resize set 200 200
 for_window [title="newsboat"] resize set 900 600, move position center
 for_window [title="ranger"] resize set 1366 500, move position center
 for_window [title="terminal"] resize set 600 400, move position center
-for_window [title="termspawn"] resize set 400 600, move position center
+for_window [title="termspawn"] resize set 470 500, move position center
 
 for_window [floating] move position center
 
-for_window [title="cmus"] resize set 683 256, move position 683 492
+for_window [title="pulsemixer"] resize set 683 256, move position 683 492
+for_window [title="cmu"] resize set 683 256, move position 683 492
 for_window [title="bluetoothctl"] resize set 440 120, move position 463 628
 
 for_window [urgent="latest"] focus

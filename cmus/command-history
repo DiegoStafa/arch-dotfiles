@@ -1,0 +1,107 @@
+set color_win_fg=default
+set color_win_fg=red
+set color_win_fg=black
+set color_win_cur_sel_fg=black
+set color_win_inactive_sel_fg=default
+set color_win_inactive_sel_fg=black
+set color_win_dir=lightcyan
+set color_separator=lightcyan
+set color_win_inactive_cur_sel_fg=lightcyan
+set color_win_title_bg=lightcyan
+set color_win_sel_bg=lightcyan
+set color_win_cur_sel_bg=lightcyan
+set color_win_cur=lightcyan
+set color_titleline_bg=lightcyan
+set color_titleline_bg=lightred
+set color_titleline_bg=cyan
+set color_titleline_bg=gray
+set color_titleline_bg=yellow
+set color_titleline_bg=yelr
+set color_titleline_bg=orange
+set color_titleline_bg=white
+set color_titleline_bg=green
+set color_titleline_bg=blue
+set color_titleline_bg=redblue
+set color_separator=blue
+set color_win_sel_fg=black
+set color_win_title_fg=black
+set color_trackwin_album_fg=black
+set color_titleline_fg=black
+set color_statusline_fg=default
+set color_statusline_fg=black
+set color_cmdline_fg=
+live-filter 
+add music
+q
+add music/
+delete http://mp3split.sourceforge.net
+remove http://mp3split.sourceforge.net
+win-scroll-down3
+refresh
+delete 
+add /home/diego/gigigio_MP3WRAP.mp3
+set show_remaining_time=false
+set show_remaining_time=true
+set show_current_bitrate=false
+set color_win_title_fg=default
+set color_win_titl
+set color_win_sel_fg=default
+set color_win_cur_sel_fg=default
+set color_win_cur_sel_fg=white
+set color_titleline_fg=default
+set color_titleline_fg=white
+set color_titleline_fg=blue
+set color_titleline_fg=yellow
+set color_titleline_fg=green
+set color_cmdline_fg=default
+set color_cmdline_fg=white
+bind -f common 1 view tree
+add /home/diego/music
+set color_win_inactive_cur_sel_fg=red
+set color_win_dir=red
+set color_win_cur=red
+set color_win_inactive_sel_bg=default
+set color_win_inactive_cur_sel_fg=lightyellow
+set color_win_inactive_cur_sel_attr=default
+set color_win_inactive_sel_bg=gray
+set color_win_inactive_cur_sel_bg=default
+set color_win_dir=lightyellow
+set color_win_dir=default
+set color_win_dir=
+set color_statusline_bg=default
+set color_separator=red
+set color_separator=default
+set color_cmdline_bg=default
+set color_win_bg=default
+set color_win_bg=black
+set color_win_bg=white
+set color_win_bg=green
+set color_titleline_bg=red
+set color_statusline_bg=red
+set color_separator=lightyellow
+set color_cmdline_bg=red
+set color_cur_sel_attr=default
+set color_cmdline_bg=d
+set color_cmdline_fg=black
+set color_cmdline_fg=defaultblack
+set color_cmdline_bg=green
+set color_win_cur_sel_fg=blue
+set color_win_cur_sel_fg=green
+set color_win_cur=lightyellow
+set color_win_cur_sel_bg=red
+set color_titleline_fg=redblack
+set color_titleline_fg=red
+set color_win_sel_bg=red
+set color_win_title_bg=red
+set color_win_title_bg=cyan
+help
+?
+del Music
+remove Music
+set mouse=true
+set mouse=false
+set mouse true
+add /home/diego/Music
+a /home/diego/Music
+h
+add /home&/diego/Music
