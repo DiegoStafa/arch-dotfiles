@@ -1,15 +1,15 @@
 configuration {
 	modi: "drun,run,window,clipboard:greenclip print";
 	width: 33;
-	lines: 11;
+	lines: 10;
 	columns: 1;
-	font: "Segoe UI 9";
+	font: "segoe ui 9";
 	terminal: "alacritty";
 	run-command: "{cmd}";
 	run-shell-command: "{terminal} --hold -e fish -c "{cmd}; exec fish" &";
 	icon-theme: "Suru++ 25 Dark";
 	show-icons: false;
-	separator-style: "solid";
+	separator-style: "none";
 	hide-scrollbar: true;
 	dpi: 96;
 	show-match: false;
@@ -19,11 +19,11 @@ configuration {
 	padding:0;
 	window-format: "{t}";
 	
-	// 
-	color-normal: "#00000000, #ffebdbb2, #00000000, #30458588, #ffffffff";
+	// 				bg 			fg					bg curr		fg curr
+	color-normal: "#00000000, #ffebdbb2, #00000000, #4c4941, #ffebdbb2";
 	color-urgent: "#ff373737, #ffebdbb2, #ff373737, #ffdc322f, #ffebdbb2";
-	color-active: "#00000000, #ff458588, #00000000, #30458588, #ffffffff";
-	color-window: "#e51d2021, #ff458588, #00000000";
+	color-active: "#00000000, #ffffffff, #00000000, #30ebdbb2, #ffebdbb2";
+	color-window: "#e51d2021, #ffebdbb2, #00000000";
 
 	kb-mode-next: "Super+Right,Tab";
 	kb-mode-previous: "Super+Left,Ctrl+Tab";

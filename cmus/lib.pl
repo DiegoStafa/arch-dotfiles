@@ -2,6 +2,7 @@
 /home/diego/music/【１周年記念】ダダダダ天使／湊あくあ【歌ってみた】-O8v5S1nhKzo.webm
 /home/diego/music/【3DLIVE】STARt IN THE SCREEEN!【#星街すいせい50万人記念ライブ】-JNmmnB4bP0M.webm
 /home/diego/music/Ahoy!! 我ら宝鐘海賊団☆-gZL4-f3jRoE.webm
+/home/diego/music/de andrè/La guerra di Piero - Fabrizio De André (Con testo)-KoYw0LHEWLM.webm
 /home/diego/music/Dragon Ball Super - Broly Theme Song  - Blizzard - Daichi Miura-QD1hDBDI_c8.webm
 /home/diego/music/Helltaker OST (Official) + Bonus Track-GzeBHIto4Ps.opus
 /home/diego/music/Houshou Marine New Ending [ed]-BADwBNBb2tc.webm
@@ -30,6 +31,12 @@
 /home/diego/music/白日 _ King Gnu (Covered by 夏色まつり&律可)-j84IEsVYGyE.webm
 /home/diego/music/馬と鹿 - 米津玄師／天音かなた(Cover)-tGXZNHNhI0I.webm
 /home/diego/music/Billy_Idol_-_Rebel_Yell.mp3
+/home/diego/music/Gli Innocenti/gli-innocenti_dimenticavo-che-sei-andata-via.mp3
+/home/diego/music/Gli Innocenti/gli-innocenti_gambe-e-motoseghe.mp3
+/home/diego/music/Gli Innocenti/gli-innocenti_maledetti-desideri.mp3
+/home/diego/music/Gli Innocenti/gli-innocenti_non-era-questo-il-mio-destino.mp3
+/home/diego/music/Gli Innocenti/gli-innocenti_plagio.mp3
+/home/diego/music/Gli Innocenti/gli-innocenti_tu-che-fai.mp3
 /home/diego/music/Attack on Titan Season 2 Original Soundtrack [FLAC]/Disc 1/01. Barricades.flac
 /home/diego/music/Attack on Titan Season 2 Original Soundtrack [FLAC]/Disc 1/02. APETITAN.flac
 /home/diego/music/Attack on Titan Season 2 Original Soundtrack [FLAC]/Disc 1/03. YouSeeBIGGIRL-T-T.flac

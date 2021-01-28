@@ -6,11 +6,11 @@
 ; f92672
 
 [colors]
-bg 							= #b0151515
-fg 							= #ffffff
+bg 							= #b01d2021
+fg 							= #ebdbb2
 active 						= #56adbc
 ac 							= #BE302F
-mf							= #b0151515
+mf							= #b01d2021
 
 trans 						= #00000000
 white 						= #FFFFFF
@@ -40,10 +40,10 @@ blue-gray 					= #546e7a
 ###########################################################
 
 [bar/mybar]
-label-unfocused-foreground	= #90ebdbb2
+#label-unfocused-foreground	= #90ebdbb2
 monitor						= ${env:MONITOR:eDP1}
 
-font-0 						= "misc tamsyn:size=13;2"
+font-0 						= "misc tamsyn:style=bold:size=13;2"
 font-1 						= "ipapgothic:size=9;3"
 
 width						= 100%
@@ -186,17 +186,17 @@ label-warn-foreground 		= ${colors.orange}
 [module/cmus]
 type						= custom/script
 exec 						= $HOME/.config/polybar/user-modules/cmus-out
-exec-if 					= pgrep -x cmus
+exec-if 					= cmus-remote -C status | grep "file"
 interval 					= 1
 label 						= %output%
 label-maxlen				= 25
 format 						= <label>
 double-click-left			= "cmus-remote --prev"
-click-left 					= "cmus-remote --next"
-click-middle 				= "cmus-remote --pause"
+click-left 					= "cmus-remote --pause"
+click-middle 				= "cmus-remote --next"
 click-right 				= "$HOME/scripts/floating-toggle cmus"
-scroll-up					= "cmus-remote --seek +2"
-scroll-down					= "cmus-remote --seek -2"
+; scroll-up					= "cmus-remote --seek +2"
+; scroll-down				= "cmus-remote --seek -2"
 
 [module/pulseaudio]
 type 						= internal/pulseaudio
@@ -259,7 +259,7 @@ double-click-left			= "$HOME/scripts/maxim -pop"
 
 [settings]
 screenchange-reload 		= true
-compositing-background 		= source
+#compositing-background 		= source
 compositing-foreground		= source
 
 [global/wm]

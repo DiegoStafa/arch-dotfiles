@@ -1,16 +1,16 @@
 # ------------------------ APPEARANCE ----------------------- #
 
-for_window [class="^.*"] 		border normal 0
-title_align 					center
+for_window [class="^.*"] 		border pixel 1
+#title_align 					center
 #for_window [floating]	 		border pixel 0
-font misc tamsyn 0
-#font pango: monospace 0
+#font misc tamsyn 0
+font pango: monospace 0
 
 # window colours: 				tit. bord.	bg      	text    	split ind.	border c.  
-client.focused 					#1d2021 	#1d2021e5	#ffffff		#ebdbb2		#ebdbb2
-client.focused_inactive			#1d2021	 	#1d2021e5	#a89984		#282828		#1d2021
-client.unfocused				#1d2021	 	#1d2021e5	#a89984		#282828		#1d2021
-client.urgent					#1d2021	 	#1d2021e5	#a89984		#282828		#1d2021
+client.focused 					#ebdbb2 	#ebdbb2		#ebdbb2		#ebdbb2		#ebdbb2
+client.focused_inactive			#1d2021	 	#1d2021		#a89984		#282828		#1d2021
+client.unfocused				#1d2021	 	#1d2021		#a89984		#282828		#1d2021
+client.urgent					#1d2021	 	#1d2021		#a89984		#282828		#1d2021
 
 hide_edge_borders smart
 
@@ -151,15 +151,15 @@ bindsym $mod+less				workspace back_and_forth
 bindsym $mod+Control+Left 		workspace prev
 bindsym $mod+Control+Right 		workspace next
 
-bindsym $mod+KP_End   			exec --no-startup-id "$scripts/xmovecorner-tb 1"
-bindsym $mod+KP_Down  			exec --no-startup-id "$scripts/xmovecorner-tb 2"
-bindsym $mod+KP_Next  			exec --no-startup-id "$scripts/xmovecorner-tb 3"
-bindsym $mod+KP_Left  			exec --no-startup-id "$scripts/xmovecorner-tb 4"
-bindsym $mod+KP_Begin			exec --no-startup-id "$scripts/xmovecorner-tb 5"
-bindsym $mod+KP_Right			exec --no-startup-id "$scripts/xmovecorner-tb 6"
-bindsym $mod+KP_Home			exec --no-startup-id "$scripts/xmovecorner-tb 7"
-bindsym $mod+KP_Up  			exec --no-startup-id "$scripts/xmovecorner-tb 8"
-bindsym $mod+KP_Prior			exec --no-startup-id "$scripts/xmovecorner-tb 9"
+bindsym $mod+KP_End   			exec --no-startup-id "$scripts/xmovecorner 1"
+bindsym $mod+KP_Down  			exec --no-startup-id "$scripts/xmovecorner 2"
+bindsym $mod+KP_Next  			exec --no-startup-id "$scripts/xmovecorner 3"
+bindsym $mod+KP_Left  			exec --no-startup-id "$scripts/xmovecorner 4"
+bindsym $mod+KP_Begin			exec --no-startup-id "$scripts/xmovecorner 5"
+bindsym $mod+KP_Right			exec --no-startup-id "$scripts/xmovecorner 6"
+bindsym $mod+KP_Home			exec --no-startup-id "$scripts/xmovecorner 7"
+bindsym $mod+KP_Up  			exec --no-startup-id "$scripts/xmovecorner 8"
+bindsym $mod+KP_Prior			exec --no-startup-id "$scripts/xmovecorner 9"
 
 # ---------------- startup programs -------------------- #
 
@@ -170,6 +170,7 @@ exec --no-startup-id 			"redshift"
 exec --no-startup-id 			"greenclip daemon"
 exec --no-startup-id 			"touch /tmp/minim_list"
 exec --no-startup-id			"python -m http.server 2000 --directory $HOME/public"
+#exec --no-startup-id			"feh --recursive --bg-fill --randomize ~/images/wallpapers/"
 exec --no-startup-id			"feh --bg-fill ~/images/wallpapers/greenpaint.jpg"
 
 # ---------------- user keybinds ----------------------- #
@@ -246,7 +247,7 @@ for_window [title="termspawn"] resize set 470 500, move position center
 
 for_window [floating] move position center
 
-for_window [title="Webcam preview"] floating enable, resize set 322 260
+for_window [title="Webcam preview"] floating enable, resize set 322 242, move position 1000 2
 for_window [title="pulsemixer"] resize set 683 256, move position 683 492
 for_window [title="cmus"] resize set 683 256, move position 683 492
 for_window [title="bluetoothctl"] resize set 440 120, move position 463 628

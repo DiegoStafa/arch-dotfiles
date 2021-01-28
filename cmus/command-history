@@ -1,3 +1,4 @@
+add music
 set color_win_fg=default
 set color_win_fg=red
 set color_win_fg=black
@@ -31,7 +32,6 @@ set color_statusline_fg=default
 set color_statusline_fg=black
 set color_cmdline_fg=
 live-filter 
-add music
 q
 add music/
 delete http://mp3split.sourceforge.net

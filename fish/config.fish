@@ -38,4 +38,4 @@ alias stream="streamlink -p mpv (xclip -o)"
 alias dict="trans -d"
 alias eng="trans -I it:en"
 alias jap="trans -I it:ja"
-
+alias popline="shuf -n 1 $HOME/documents/jp/sillabario"
