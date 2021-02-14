@@ -2,12 +2,14 @@
 /home/diego/music/【１周年記念】ダダダダ天使／湊あくあ【歌ってみた】-O8v5S1nhKzo.webm
 /home/diego/music/【3DLIVE】STARt IN THE SCREEEN!【#星街すいせい50万人記念ライブ】-JNmmnB4bP0M.webm
 /home/diego/music/Ahoy!! 我ら宝鐘海賊団☆-gZL4-f3jRoE.webm
-/home/diego/music/de andrè/La guerra di Piero - Fabrizio De André (Con testo)-KoYw0LHEWLM.webm
+/home/diego/music/de andrè/Ballata dell'Amore cieco o della Vanità (testo) - Fabrizio de André-6t5KRvu7xRY.webm
+/home/diego/music/de andrè/Don Raffaè-rDO7VIgomps.webm
+/home/diego/music/de andrè/Fabrizio De André - Disamistade (Still_Pseudo Video)-NCzoM5WRheQ.webm
+/home/diego/music/de andrè/Il bombarolo-ORKJVgdw7Qo.webm
+/home/diego/music/de andrè/La Guerra Di Piero-oFb-5U9flLQ.webm
 /home/diego/music/Dragon Ball Super - Broly Theme Song  - Blizzard - Daichi Miura-QD1hDBDI_c8.webm
-/home/diego/music/Helltaker OST (Official) + Bonus Track-GzeBHIto4Ps.opus
 /home/diego/music/Houshou Marine New Ending [ed]-BADwBNBb2tc.webm
 /home/diego/music/inanis.mp4
-/home/diego/music/justdoit.webm
 /home/diego/music/【Kaguya-sama wa Kokurasetai OST vol. 2】19. Shippai (失敗)-jTl8soYvElo.opus
 /home/diego/music/Kakusei-7u052cW1e1Y.webm
 /home/diego/music/KING／Covered by紫咲シオン【歌ってみた】-OXAkx5_A9rE.webm

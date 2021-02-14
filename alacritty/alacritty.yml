@@ -22,30 +22,34 @@ scrolling:
 colors:
   # Default colors
   primary:
-    background: '#2D2D2D'
-    foreground: '#B3B9C5'
+    # hard contrast: background = '#1d2021'
+    background: '#1d2021'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
+
   # Normal colors
   normal:
-    black: '#2D2D2D'
-    red: '#F2777A'
-    green: '#92D192'
-    yellow: '#FFD479'
-    blue: '#6AB0F3'
-    magenta: '#E1A6F2'
-    cyan: '#76D4D6'
-    white: '#B3B9C5'
+    black: '#282828'
+    red: '#cc241d'
+    green: '#98971a'
+    yellow: '#d79921'
+    blue: '#458588'
+    magenta: '#b16286'
+    cyan: '#689d6a'
+    white: '#a89984'
+
   # Bright colors
   bright:
-    black: '#777C85'
-    red: '#F2777A'
-    green: '#76D4D6'
-    yellow: '#FFEEA6'
-    blue: '#6AB0F3'
-    magenta: '#E1A6F2'
-    cyan: '#76D4D6'
-    white: '#FFFFFF'
+    black: '#928374'
+    red: '#fb4934'
+    green: '#b8bb26'
+    yellow: '#fabd2f'
+    blue: '#83a598'
+    magenta: '#d3869b'
+    cyan: '#8ec07c'
+    white: '#ebdbb2'
 
-background_opacity: 0.9
+background_opacity: 0.93
 key_bindings:
   - {
       key: Return,

@@ -17,13 +17,13 @@ configuration {
 	line-margin: 0;
 	line-padding: 5;
 	padding:0;
-	window-format: "{t}";
+	window-format: "{w} {c} {n} {t}";
 	
 	// 				bg 			fg					bg curr		fg curr
 	color-normal: "#00000000, #ffebdbb2, #00000000, #4c4941, #ffebdbb2";
 	color-urgent: "#ff373737, #ffebdbb2, #ff373737, #ffdc322f, #ffebdbb2";
 	color-active: "#00000000, #ffffffff, #00000000, #30ebdbb2, #ffebdbb2";
-	color-window: "#e51d2021, #ffebdbb2, #00000000";
+	color-window: "#ed1d2021, #ffebdbb2, #00000000";
 
 	kb-mode-next: "Super+Right,Tab";
 	kb-mode-previous: "Super+Left,Ctrl+Tab";

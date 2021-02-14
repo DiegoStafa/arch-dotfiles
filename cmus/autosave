@@ -1,4 +1,4 @@
-set aaa_mode=artist
+set aaa_mode=all
 set altformat_current= %F 
 set altformat_playlist= %f%= %d 
 set altformat_title=%f
@@ -115,7 +115,7 @@ set smart_artist_sort=true
 set softvol=false
 set softvol_state=0 0
 set start_view=tree
-set status_display_program=
+set status_display_program=cmus-status-display
 set time_show_leading_zero=true
 set wrap_search=true
 bind browser backspace browser-up

@@ -6,11 +6,11 @@
 ; f92672
 
 [colors]
-bg 							= #b01d2021
+bg 							= #ed1d2021
 fg 							= #ebdbb2
-active 						= #56adbc
+active 						= #fb4934
 ac 							= #BE302F
-mf							= #b01d2021
+mf							= #ed1d2021
 
 trans 						= #00000000
 white 						= #FFFFFF
@@ -41,9 +41,8 @@ blue-gray 					= #546e7a
 
 [bar/mybar]
 #label-unfocused-foreground	= #90ebdbb2
-monitor						= ${env:MONITOR:eDP1}
-
-font-0 						= "misc tamsyn:style=bold:size=13;2"
+monitor			 			= ${env:MONITOR:eDP1}
+font-0 						= "misc tamsyn:style=regular:size=13;2"
 font-1 						= "ipapgothic:size=9;3"
 
 width						= 100%
@@ -167,7 +166,7 @@ click-right					= alacritty -e fish -c "curl -s v2.wttr.in/Cavarzere; exec fish"
 type 						= internal/temperature
 interval 					= 0.5
 thermal-zone 				= 0
-warn-temperature 			= 60
+warn-temperature 			= 65
 units 						= true
 format 						= <label>
 format-background 			= ${colors.mf}
@@ -229,11 +228,11 @@ type						= internal/xkeyboard
 blacklist-0 				= num lock
 blacklist-1		 			= scroll lock
 format 						= <label-indicator>
-format-background 			= ${colors.indigo}
+format-background 			= #cc241d
 format-padding 				= 1
 format-underline			= ${colors.bg}
 format-overline				= ${colors.bg}
-label-indicator-on 			= %name%
+label-indicator-on 			= CAPS
 label-indicator-foreground 	= ${colors.ac}
 
 [module/power]

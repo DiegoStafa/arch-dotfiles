@@ -1,3 +1,5 @@
+set status_display_program=cmus-status-display
+set status_display_program=/home/diego/scripts/cmus-notify
 add music
 set color_win_fg=default
 set color_win_fg=red
