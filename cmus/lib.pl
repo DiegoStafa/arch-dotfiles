@@ -8,11 +8,14 @@
 /home/diego/music/de andrè/Il bombarolo-ORKJVgdw7Qo.webm
 /home/diego/music/de andrè/La Guerra Di Piero-oFb-5U9flLQ.webm
 /home/diego/music/Dragon Ball Super - Broly Theme Song  - Blizzard - Daichi Miura-QD1hDBDI_c8.webm
+/home/diego/music/Helltaker OST (Official) + Bonus Track-GzeBHIto4Ps.opus
 /home/diego/music/Houshou Marine New Ending [ed]-BADwBNBb2tc.webm
 /home/diego/music/inanis.mp4
+/home/diego/music/justdoit.webm
 /home/diego/music/【Kaguya-sama wa Kokurasetai OST vol. 2】19. Shippai (失敗)-jTl8soYvElo.opus
 /home/diego/music/Kakusei-7u052cW1e1Y.webm
 /home/diego/music/KING／Covered by紫咲シオン【歌ってみた】-OXAkx5_A9rE.webm
+/home/diego/music/KING_常闇トワ(cover)-9RBY7u5qas8.webm
 /home/diego/music/Mittsies - Vitality-EnDXGQmCz3U.opus
 /home/diego/music/NEXT COLOR PLANET _ 星街すいせい-vQHVGXdcqEQ.webm
 /home/diego/music/noel.mp4
@@ -23,7 +26,10 @@
 /home/diego/music/Say!ファンファーレ!_白上フブキ【オリジナル曲】-pFgUluV_00s.webm
 /home/diego/music/StaRt_Mrs. GREEN APPLE：白上フブキ(1Chorus)-R_gGlLTA3VM.webm
 /home/diego/music/templeOS.webm
+/home/diego/music/The Gentle Men - Skynut-FOeBaPVwRsE.m4a
+/home/diego/music/Tokoyami Towa sama - Lemon (20_10_2020)-KsX-ZWG22aM.m4a
 /home/diego/music/TVアニメ「ゾンビランドサガ」OPテーマ『徒花ネクロマンシー』-yDXVqicnWeo.webm
+/home/diego/music/うっせぇわ／Covered by紫咲シオン【歌ってみた】-5fifnky9v_I.m4a
 /home/diego/music/グレゴリオ _古川本舗 　covered by アルス・アルマル-XyL6bhHsNhQ.webm
 /home/diego/music/【しっとりと】ダイアモンドクレバス_Diamond Crevasse(cover)【歌ってみた_ときのそら】-x1_OmuQLRYU.webm
 /home/diego/music/スネ夫が自慢話をするときに流れているKING歌ってみた-85GMixQRHFw.webm

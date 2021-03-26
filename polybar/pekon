@@ -76,7 +76,7 @@ label-empty 			=
 
 [module/wttrin]
 type 				= custom/script
-exec 				= /home/diego/scripts/wttr-out
+exec 				= /wttr-out
 interval 			= 180
 format 				= <label>
 format-background 		= ${colors.bg}

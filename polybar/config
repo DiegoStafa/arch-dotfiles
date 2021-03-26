@@ -41,7 +41,7 @@ blue-gray 					= #546e7a
 
 [bar/mybar]
 #label-unfocused-foreground	= #90ebdbb2
-monitor			 			= ${env:MONITOR:eDP1}
+#monitor			 			= $DISPLAY
 font-0 						= "misc tamsyn:style=regular:size=13;2"
 font-1 						= "ipapgothic:size=9;3"
 
@@ -58,13 +58,38 @@ padding						= 0
 ;border-top-size			= 1
 ;border-top-color			= ${colors.orange}
 
-modules-left				= maximizer i3 title
+modules-left				= xshow ewmh title
 modules-center				= date
-modules-right				= wttrin temperature pulseaudio cmus xbacklight xkeyboard power
+modules-right				= wttrin temperature pulseaudio cmus backlight xkeyboard power
 
 ###########################################################
 #---------------------- MODULES --------------------------#
 ###########################################################
+
+[module/ewmh]
+type = internal/xworkspaces
+#pin-workspaces = true
+enable-click = true
+enable-scroll = false
+format = <label-state>
+label-monitor = %name%
+
+label-active = %name%
+label-active-foreground = ${colors.active}
+label-active-background = ${colors.mf}
+label-active-padding = 1
+
+label-urgent = %name%
+label-urgent-background =  ${colors.red}
+label-urgent-padding = 1
+
+label-occupied = %name%
+label-occupied-background = ${colors.mf}
+label-occupied-padding = 1
+
+label-empty = %name%
+label-empty-padding = 1
+
 
 [module/bspwm]
 type = internal/bspwm
@@ -127,6 +152,14 @@ label-urgent 				= %name%
 label-urgent-background 	= ${colors.red}
 label-urgent-padding 		= 1
 
+[module/polywins]
+type = custom/script
+exec = $HOME/.config/polybar/user-modules/polywins 2>/dev/null
+format = <label>
+label = %output%
+label-padding = 1
+tail = true
+
 [module/title]
 type						= internal/xwindow
 format						= <label>
@@ -159,8 +192,8 @@ format-padding				= 1
 format-background 			= ${colors.mf}
 format-underline			= ${colors.bg}
 format-overline				= ${colors.bg}
-click-left 					= alacritty -e fish -c "curl -s wttr.in/Cavarzere; exec fish" &
-click-right					= alacritty -e fish -c "curl -s v2.wttr.in/Cavarzere; exec fish" &
+click-left 					= alacritty -t "weather 1" -e fish -c "curl -s wttr.in/Cavarzere; exec fish" &
+click-right					= alacritty -t "weather 2" -e fish -c "curl -s v2.wttr.in/Cavarzere; exec fish" &
 
 [module/temperature]
 type 						= internal/temperature
@@ -193,7 +226,7 @@ format 						= <label>
 double-click-left			= "cmus-remote --prev"
 click-left 					= "cmus-remote --pause"
 click-middle 				= "cmus-remote --next"
-click-right 				= "$HOME/scripts/floating-toggle cmus"
+click-right 				= "floating-toggle cmus"
 ; scroll-up					= "cmus-remote --seek +2"
 ; scroll-down				= "cmus-remote --seek -2"
 
@@ -211,10 +244,10 @@ format-muted-overline		= ${colors.bg}
 format-muted-prefix 		= 
 label-muted 				= "MUTED"
 label-muted-foreground 		= ${colors.gray}
-click-right					= "$HOME/scripts/floating-toggle pulsemixer"
+click-right					= "floating-toggle pulsemixer"
 
-[module/xbacklight]
-type 						= internal/xbacklight
+[module/backlight]
+type 						= internal/backlight
 card 						= intel_backlight
 format 						= LGT <label>
 format-background 			= ${colors.mf}
@@ -222,6 +255,7 @@ format-padding 				= 1
 format-underline			= ${colors.bg}
 format-overline				= ${colors.bg}
 label 						= %percentage%%
+enable-scroll 				= true
 
 [module/xkeyboard]
 type						= internal/xkeyboard
@@ -240,21 +274,21 @@ type 						= custom/text
 content						= "SYS"
 content-padding				= 1
 content-background 			= ${colors.mf}
-click-left	 				= $HOME/scripts/powermenu
+click-left	 				= powermenu
 
-[module/maximizer]
+[module/xshow]
 type 						= custom/script
-exec 						= "wc -l < /tmp/minim_list"
-interval 					= 0.5
+exec 						= "wc -l < /tmp/xhide_list"
 label 						= "%output% _-"
+interval					= 0.5
 format 						= <label>
 format-padding				= 1
 format-background 			= ${colors.mf}
 format-underline			= ${colors.bg}
 format-overline				= ${colors.bg}
-click-left 					= "$HOME/scripts/maxim"
-click-right					= "$HOME/scripts/minim"
-double-click-left			= "$HOME/scripts/maxim -pop"
+click-left 					= "xshow"
+click-right					= "xhide"
+double-click-left			= "xshow -pop"
 
 [settings]
 screenchange-reload 		= true

@@ -4,7 +4,7 @@ export PATH=/bin:/home/diego/scripts
 set EDITOR nvim
 set VISUAL code
 
-alias audio-visualizer="cava"
+alias audio-vis="cava"
 
 alias install="yay -S"
 alias uninstall="sudo pacman -Rnsc"
@@ -32,12 +32,11 @@ alias yt-v="youtube-dl --no-playlist (xclip -o)"
 alias pdf="zathura"
 alias bt="sudo bluetoothctl"
 
-alias mpv="mpv --hwdec=auto"
 alias stream="streamlink -p mpv (xclip -o)"
 
-alias dict="trans -d"
-alias eng="trans -I it:en"
-alias jap="trans -I it:ja"
+alias meaning="trans -d"
 alias popline="shuf -n 1 $HOME/documents/jp/sillabario"
 
-alias webview="curl -s (xclip -o) | html2text | less"
+alias webterm="curl -s (xclip -o) | html2text | less"
+
+alias region="slop"

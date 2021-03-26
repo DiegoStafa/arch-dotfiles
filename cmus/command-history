@@ -1,6 +1,9 @@
-set status_display_program=cmus-status-display
-set status_display_program=/home/diego/scripts/cmus-notify
 add music
+live-filter 
+bind -f common q quit
+bind -f common q quit -i
+set status_display_program=cmus-status-display
+set status_display_program=/cmus-notify
 set color_win_fg=default
 set color_win_fg=red
 set color_win_fg=black
@@ -33,7 +36,6 @@ set color_titleline_fg=black
 set color_statusline_fg=default
 set color_statusline_fg=black
 set color_cmdline_fg=
-live-filter 
 q
 add music/
 delete http://mp3split.sourceforge.net

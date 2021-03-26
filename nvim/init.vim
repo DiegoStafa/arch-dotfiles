@@ -1,9 +1,6 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
 set mouse=a
-set wrap!
-set foldmarker={,}
-set foldmethod=marker
 set clipboard+=unnamedplus
 set tabstop=4
 set shiftwidth=4

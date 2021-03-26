@@ -3,7 +3,7 @@ configuration {
 	width: 33;
 	lines: 10;
 	columns: 1;
-	font: "segoe ui 9";
+	font: "terminus 9";
 	terminal: "alacritty";
 	run-command: "{cmd}";
 	run-shell-command: "{terminal} --hold -e fish -c "{cmd}; exec fish" &";
@@ -14,9 +14,11 @@ configuration {
 	dpi: 96;
 	show-match: false;
 	drun-match-fields: "name,categories";
+	drun-display-format: "{name}";
 	line-margin: 0;
-	line-padding: 5;
+	line-padding: 8;
 	padding:0;
+	bw: 1;
 	window-format: "{w} {c} {n} {t}";
 	
 	// 				bg 			fg					bg curr		fg curr
@@ -28,4 +30,6 @@ configuration {
 	kb-mode-next: "Super+Right,Tab";
 	kb-mode-previous: "Super+Left,Ctrl+Tab";
 	kb-row-tab: "";
+	me-select-entry: "MouseSecondary";
+	me-accept-entry: "MousePrimary";
 }

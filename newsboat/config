@@ -1,7 +1,7 @@
 browser "chromium %u"
 
-macro m set browser "/home/diego/scripts/floating-toggle newsboat & mpv  %u" ; open-in-browser ; set browser "chromium %u"
-macro a set browser "/home/diego/scripts/floating-toggle newsboat & mpv --no-video --no-video %u" ; open-in-browser ; set browser "chromium %u"
+macro m set browser "floating-toggle newsboat & mpv  %u" ; open-in-browser ; set browser "chromium %u"
+macro a set browser "floating-toggle newsboat & mpv --no-video --no-video %u" ; open-in-browser ; set browser "chromium %u"
 
 always-display-description yes
 

@@ -8,6 +8,9 @@ font:
     style: regular
 
 window:
+  #  dimensions:
+  #    columns: 70
+  #    lines: 25
   dynamic_padding: true
   padding:
     x: 4
@@ -23,8 +26,8 @@ colors:
   # Default colors
   primary:
     # hard contrast: background = '#1d2021'
-    background: '#1d2021'
     # soft contrast: background = '#32302f'
+    background: '#1d2021'
     foreground: '#ebdbb2'
 
   # Normal colors
@@ -51,8 +54,4 @@ colors:
 
 background_opacity: 0.93
 key_bindings:
-  - {
-      key: Return,
-      mods: Control|Shift,
-      action: SpawnNewInstance
-    }
+  - { key: Return, mods: Control, action: SpawnNewInstance }
