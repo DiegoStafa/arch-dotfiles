@@ -22,10 +22,10 @@ configuration {
 	window-format: "{w} {c} {n} {t}";
 	
 	// 				bg 			fg					bg curr		fg curr
-	color-normal: "#00000000, #ffebdbb2, #00000000, #4c4941, #ffebdbb2";
+	color-normal: "#00000000, #AB948D, #00000000, #004c4941, #EADFD4";
 	color-urgent: "#ff373737, #ffebdbb2, #ff373737, #ffdc322f, #ffebdbb2";
 	color-active: "#00000000, #ffffffff, #00000000, #30ebdbb2, #ffebdbb2";
-	color-window: "#ed1d2021, #ffebdbb2, #00000000";
+	color-window: "#f0282428, #EADFD4, #00000000";
 
 	kb-mode-next: "Super+Right,Tab";
 	kb-mode-previous: "Super+Left,Ctrl+Tab";

@@ -42,6 +42,7 @@ blue-gray 					= #546e7a
 [bar/mybar]
 #label-unfocused-foreground	= #90ebdbb2
 #monitor			 			= $DISPLAY
+wm-name = "polybar_mob"
 font-0 						= "misc tamsyn:style=regular:size=13;2"
 font-1 						= "ipapgothic:size=9;3"
 
@@ -58,7 +59,7 @@ padding						= 0
 ;border-top-size			= 1
 ;border-top-color			= ${colors.orange}
 
-modules-left				= xshow ewmh title
+modules-left				= xhide-counter i3 xhide
 modules-center				= date
 modules-right				= wttrin temperature pulseaudio cmus backlight xkeyboard power
 
@@ -152,13 +153,13 @@ label-urgent 				= %name%
 label-urgent-background 	= ${colors.red}
 label-urgent-padding 		= 1
 
-[module/polywins]
-type = custom/script
-exec = $HOME/.config/polybar/user-modules/polywins 2>/dev/null
-format = <label>
-label = %output%
-label-padding = 1
-tail = true
+[module/xhide]
+type						= custom/script
+exec						= $HOME/scripts/polybar/xhide-out
+format						= <label>
+label 						= %output%
+label-padding 				= 1
+interval 					= 0.5
 
 [module/title]
 type						= internal/xwindow
@@ -184,7 +185,7 @@ label 						= %time%
 
 [module/wttrin]
 type 						= custom/script
-exec 						= $HOME/.config/polybar/user-modules/wttr-out
+exec 						= $HOME/scripts/polybar/wttr-out
 interval 					= 180
 label 						= %output%
 format 						= <label>
@@ -192,8 +193,9 @@ format-padding				= 1
 format-background 			= ${colors.mf}
 format-underline			= ${colors.bg}
 format-overline				= ${colors.bg}
-click-left 					= alacritty -t "weather 1" -e fish -c "curl -s wttr.in/Cavarzere; exec fish" &
-click-right					= alacritty -t "weather 2" -e fish -c "curl -s v2.wttr.in/Cavarzere; exec fish" &
+click-left 					= alacritty --hold -t "weather 1" -e fish -c "curl -s wttr.in/Cavarzere | head -n38" &
+click-middle				= alacritty --hold -t "weather 2" -e fish -c "curl -s wttr.in/Moon | head -n23" &
+click-right					= alacritty --hold -t "weather 3" -e fish -c "curl -s v2.wttr.in/Cavarzere | head -n43" &
 
 [module/temperature]
 type 						= internal/temperature
@@ -217,7 +219,7 @@ label-warn-foreground 		= ${colors.orange}
 
 [module/cmus]
 type						= custom/script
-exec 						= $HOME/.config/polybar/user-modules/cmus-out
+exec 						= $HOME/scripts/polybar/cmus-out
 exec-if 					= cmus-remote -C status | grep "file"
 interval 					= 1
 label 						= %output%
@@ -276,7 +278,7 @@ content-padding				= 1
 content-background 			= ${colors.mf}
 click-left	 				= powermenu
 
-[module/xshow]
+[module/xhide-counter]
 type 						= custom/script
 exec 						= "wc -l < /tmp/xhide_list"
 label 						= "%output% _-"

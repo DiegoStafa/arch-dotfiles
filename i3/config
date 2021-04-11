@@ -41,89 +41,72 @@ bindsym $mod+Shift+o			mode "$mode_gaps_out"
 mode "$mode_gaps_out" 
 {
 	bindsym KP_Add				gaps outer current	plus	5
-		bindsym KP_Subtract 		gaps outer current 	minus	5
-		bindsym End  	 			gaps outer current 	set	0
-		bindsym KP_Enter			gaps outer current	set 	$outer_gaps
-
-		bindsym Shift+KP_Add		gaps outer all		plus	5
-		bindsym Shift+KP_Subtract 	gaps outer all 		minus	5
-		bindsym Shift+End			gaps outer all 		set	0
-		bindsym Shift+KP_Enter		gaps outer all		set 	$outer_gaps
-
-		bindsym Escape				mode "default"
+	bindsym KP_Subtract 		gaps outer current 	minus	5
+	bindsym End  	 			gaps outer current 	set	0
+	bindsym KP_Enter			gaps outer current	set 	$outer_gaps
+	bindsym Shift+KP_Add		gaps outer all		plus	5
+	bindsym Shift+KP_Subtract 	gaps outer all 		minus	5
+	bindsym Shift+End			gaps outer all 		set	0
+	bindsym Shift+KP_Enter		gaps outer all		set 	$outer_gaps
+	bindsym Escape				mode "default"
 }
 
 mode "$mode_gaps_in" 
 {
 	bindsym KP_Add				gaps inner current	plus	5
-		bindsym KP_Subtract 		gaps inner current 	minus	5
-		bindsym End	   				gaps inner current 	set	0
-		bindsym KP_Enter			gaps inner current	set 	$inner_gaps
-
-		bindsym Shift+KP_Add		gaps inner all		plus	5
-		bindsym Shift+KP_Subtract 	gaps inner all 		minus	5
-		bindsym Shift+End			gaps inner all 		set	0
-		bindsym Shift+KP_Enter		gaps inner all		set	$inner_gaps
-
-		bindsym Escape 				mode "default"
+	bindsym KP_Subtract 		gaps inner current 	minus	5
+	bindsym End	   				gaps inner current 	set	0
+	bindsym KP_Enter			gaps inner current	set 	$inner_gaps
+	bindsym Shift+KP_Add		gaps inner all		plus	5
+	bindsym Shift+KP_Subtract 	gaps inner all 		minus	5
+	bindsym Shift+End			gaps inner all 		set	0
+	bindsym Shift+KP_Enter		gaps inner all		set	$inner_gaps
+	bindsym Escape 				mode "default"
 }
 
 # --------------------- wm keybind ------------------------- #
 
-# session
+floating_modifier				$mod
+
 bindsym $mod+Shift+C 			reload
 bindsym $mod+Shift+r 			restart
 
-# drag floating windows
-floating_modifier				$mod
-
-# tiling / floating
 bindsym $mod+Shift+space		floating toggle
 
-# orientation
 bindsym $mod+h					split h
 bindsym $mod+v					split v
 
-# layout
 bindsym $mod+s					layout stacking
 bindsym $mod+w					layout tabbed
 bindsym $mod+e					layout toggle split
 bindsym $mod+q					split h, layout tabbed
-# focus
+
 bindsym $mod+Left 				focus left
 bindsym $mod+Down 				focus down
 bindsym $mod+Up 				focus up
 bindsym $mod+Right 				focus right
-
 bindsym $mod+a					focus parent
 
-# move window
-bindsym $mod+Shift+Left			move left
-bindsym $mod+Shift+Down			move down
-bindsym $mod+Shift+Up			move up
-bindsym $mod+Shift+Right		move right
-
-# kill focused window
+bindsym $mod+Control+Left		move left
+bindsym $mod+Control+Down		move down
+bindsym $mod+Control+Up			move up
+bindsym $mod+Control+Right		move right
 bindsym $mod+Shift+q			kill
-#bindsym --release $mod+button2 kill
 
-# fullscreen
 bindsym $mod+f					fullscreen toggle
-
-# resize window
 bindsym $mod+r 					mode "resize mode"
 
 mode "resize mode"
 {
 	bindsym Right			resize grow 	width 	10 px or 10 ppt
-		bindsym Up 				resize shrink 	height 	10 px or 10 ppt
-		bindsym Down 			resize grow 	height 	10 px or 10 ppt
-		bindsym Left 			resize shrink 	width 	10 px or 10 ppt
+	bindsym Up 				resize shrink 	height 	10 px or 10 ppt
+	bindsym Down 			resize grow 	height 	10 px or 10 ppt
+	bindsym Left 			resize shrink 	width 	10 px or 10 ppt
 
-# back to normal
-		bindsym Return 			mode "default"
-		bindsym Escape 			mode "default"
-		bindsym $mod+r 			mode "default"
+	# back to normal mode
+	bindsym Return 			mode "default"
+	bindsym Escape 			mode "default"
+	bindsym $mod+r 			mode "default"
 }
 
 
@@ -151,40 +134,25 @@ bindsym $mod+Shift+8 			move container to workspace 8
 bindsym $mod+Shift+9 			move container to workspace 9
 bindsym $mod+Shift+0 			move container to workspace 10
 
-bindsym $mod+less				workspace back_and_forth
-bindsym $mod+Control+Left 		workspace prev
-bindsym $mod+Control+Right 		workspace next
-
-bindsym $mod+KP_End   			exec --no-startup-id "xmovecorner 1"
-bindsym $mod+KP_Down  			exec --no-startup-id "xmovecorner 2"
-bindsym $mod+KP_Next  			exec --no-startup-id "xmovecorner 3"
-bindsym $mod+KP_Left  			exec --no-startup-id "xmovecorner 4"
-bindsym $mod+KP_Begin			exec --no-startup-id "xmovecorner 5"
-bindsym $mod+KP_Right			exec --no-startup-id "xmovecorner 6"
-bindsym $mod+KP_Home			exec --no-startup-id "xmovecorner 7"
-bindsym $mod+KP_Up  			exec --no-startup-id "xmovecorner 8"
-bindsym $mod+KP_Prior			exec --no-startup-id "xmovecorner 9"
+bindsym $mod+p					workspace back_and_forth
+bindsym $mod+Shift+Left 		workspace prev
+bindsym $mod+Shift+Right 		workspace next
 
 # ---------------- startup programs -------------------- #
 
 exec --no-startup-id 			"polybar mybar"
 exec --no-startup-id			"tint2"
-#exec --no-startup-id			"xfce4-panel --disable-wm-check"
 exec --no-startup-id			"nm-applet"
 exec --no-startup-id 			"redshift"
 exec --no-startup-id 			"greenclip daemon"
 exec --no-startup-id 			"touch /tmp/xhide_list"
-exec --no-startup-id			"python -m http.server 3333 --directory $HOME/public"
+exec --no-startup-id			"python -m http.server 7777 --directory $HOME/public"
 #exec --no-startup-id			"feh --recursive --bg-fill --randomize ~/images/wallpapers/art"
-
-# xdotool corner actions
-
-#exec --no-startup-id			"xdotool behave_screen_edge --delay 400 bottom exec --sync rofi -show window -font 'Liberation mono 8' -width 50 -location 6 -bw 0 -yoffset -20"
 
 # ---------------- user keybinds ----------------------- #
 
 bindsym $mod+Return				exec --no-startup-id "alacritty"
-bindsym $mod+Shift+Return		exec --no-startup-id "alacritty -t termspawn --class _scratchpad"
+bindsym $mod+Shift+Return		exec --no-startup-id "alacritty --class floatterm"
 
 bindsym $mod+F1					exec --no-startup-id "chromium"
 bindsym $mod+F2					exec --no-startup-id "chromium --app='https://youtube.com'"
@@ -192,18 +160,10 @@ bindsym $mod+F3					exec --no-startup-id "chromium --app='https://radio.garden'"
 bindsym $mod+F4					exec --no-startup-id "chromium --app='https://4chan.org'"
 bindsym $mod+F5					exec --no-startup-id "speedcrunch"
 bindsym $mod+F6					exec --no-startup-id "kolourpaint"
-#bindsym $mod+F7				exec --no-startup-id ""
-#bindsym $mod+F8				exec --no-startup-id ""
-#bindsym $mod+F9				exec --no-startup-id ""
-#bindsym $mod+F10				exec --no-startup-id ""
-#bindsym $mod+F11				exec --no-startup-id ""
-#bindsym $mod+F12				exec --no-startup-id ""
 
 bindsym $mod+d					exec --no-startup-id "rofi -show drun"
 bindsym $mod+c 					exec --no-startup-id "rofi -show clipboard"
 bindsym $mod+space				exec --no-startup-id "rofi -show window -width 50 -location 6 -bw 0 -yoffset -20"
-#bindsym $mod+backslash			exec --no-startup-id "rofi-web-search"
-#bindsym $mod+i					exec --no-startup-id "rofi-web-search -img"
 
 bindsym $mod+period 			exec --no-startup-id "floating-toggle terminal"
 bindsym $mod+b 					exec --no-startup-id "floating-toggle bluetoothctl"
@@ -221,39 +181,50 @@ bindsym $mod+Shift+BackSpace	exec --no-startup-id "capture-tools -menu"
 bindsym $mod+Shift+Pause		exec --no-startup-id "killall ffmpeg"
 
 bindsym $mod+Escape				exec --no-startup-id "powermenu"
-bindsym $mod+Alt_L				exec --no-startup-id "toggle-display polybar-mybar_eDP-1-1"
+bindsym $mod+Alt_L				exec --no-startup-id "toggle-display polybar_mob"
 bindsym $mod+t					exec --no-startup-id "toggle-display tint"
 
 bindsym $mod+Shift+k			exec --no-startup-id "i3-kill-ws"
-bindsym $mod+backslash			exec --no-startup-id "i3-goto-ws"
+bindsym $mod+Shift+Tab			exec --no-startup-id "i3-goto-ws"
 bindsym $mod+Tab				exec --no-startup-id "i3-goto-ws -next"
+
+bindsym $mod+KP_End   			exec --no-startup-id "xmovecorner 1"
+bindsym $mod+KP_Down  			exec --no-startup-id "xmovecorner 2"
+bindsym $mod+KP_Next  			exec --no-startup-id "xmovecorner 3"
+bindsym $mod+KP_Left  			exec --no-startup-id "xmovecorner 4"
+bindsym $mod+KP_Begin			exec --no-startup-id "xmovecorner 5"
+bindsym $mod+KP_Right			exec --no-startup-id "xmovecorner 6"
+bindsym $mod+KP_Home			exec --no-startup-id "xmovecorner 7"
+bindsym $mod+KP_Up  			exec --no-startup-id "xmovecorner 8"
+bindsym $mod+KP_Prior			exec --no-startup-id "xmovecorner 9"
 
 bindsym $mod+minus 				scratchpad show
 bindsym $mod+comma 				sticky toggle
 bindsym $mod+Shift+minus 		move scratchpad
 
-
-# Pulse Audio controls
 bindsym XF86AudioRaiseVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute 			exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle
-
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp 	exec --no-startup-id light -A 5 # increase screen brightness
-bindsym XF86MonBrightnessDown 	exec --no-startup-id light -U 5 # decrease screen brightness
-
+bindsym XF86MonBrightnessUp 	exec --no-startup-id light -A 5 
+bindsym XF86MonBrightnessDown 	exec --no-startup-id light -U 5 
 bindsym XF86ScreenSaver 		exec --no-startup-id xset dpms force off
-
 
 for_window [class="Xboard"] floating enable
 for_window [class="SpeedCrunch"] floating enable
 for_window [class="Blueman*"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="Komikku"] floating enable
+
 for_window [instance="_scratchpad"] floating enable, move scratchpad, scratchpad show
+for_window [instance="floatterm"] floating enable, resize set 600 400
+
 for_window [title="Event Tester"] floating enable, resize set 200 200
+for_window [title="weather 1"] floating enable, resize set 890 562
+for_window [title="weather 2"] floating enable, resize set 346 352
+for_window [title="weather 3"] floating enable, resize set 532 630
 for_window [title="newsboat"] resize set 900 600
 for_window [title="ranger"] resize set 1366 500
 for_window [title="terminal"] resize set 600 400
-for_window [title="termspawn"] resize set 600 400
 
 for_window [floating] move position center
 
@@ -262,7 +233,11 @@ for_window [title="pulsemixer"] resize set 683 256, move position 683 492
 for_window [title="cmus"] resize set 683 256, move position 683 492
 for_window [title="bluetoothctl"] resize set 440 120, move position 463 628
 
+assign [class="Xboard"] 8
 assign [class="TelegramDesktop"] 7
+assign [instance="web.whatsapp.com"] 7
+assign [instance="youtube.com"] 2
+assign [title="Arch Update"] 10
 
 for_window [urgent="latest"] focus
 focus_follows_mouse no

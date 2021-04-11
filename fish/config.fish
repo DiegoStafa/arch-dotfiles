@@ -34,9 +34,11 @@ alias bt="sudo bluetoothctl"
 
 alias stream="streamlink -p mpv (xclip -o)"
 
-alias meaning="trans -d"
+alias mean="trans -d"
 alias popline="shuf -n 1 $HOME/documents/jp/sillabario"
 
 alias webterm="curl -s (xclip -o) | html2text | less"
-
+alias getip="curl http://icanhazip.com/"
 alias region="slop"
+
+alias webcam="ffmpeg -i /dev/video0 -pix_fmt yuv420p -an -f sdl2 "Webcam-Preview""
