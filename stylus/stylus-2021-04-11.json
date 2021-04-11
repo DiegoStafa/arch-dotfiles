@@ -1,0 +1,167 @@
+[
+  {
+    "settings": {
+      "openEditInWindow": true,
+      "openEditInWindow.popup": false,
+      "windowPosition": {
+        "height": 690,
+        "left": 20,
+        "top": 38,
+        "width": 1326
+      },
+      "show-badge": true,
+      "disableAll": false,
+      "exposeIframes": false,
+      "newStyleAsUsercss": false,
+      "styleViaXhr": false,
+      "patchCsp": false,
+      "config.autosave": true,
+      "popup.breadcrumbs": true,
+      "popup.breadcrumbs.usePath": false,
+      "popup.enabledFirst": true,
+      "popup.stylesFirst": true,
+      "popup.autoResort": false,
+      "popup.borders": false,
+      "popup.findStylesInline": true,
+      "manage.onlyEnabled": false,
+      "manage.onlyLocal": false,
+      "manage.onlyUsercss": false,
+      "manage.onlyEnabled.invert": false,
+      "manage.onlyLocal.invert": false,
+      "manage.onlyUsercss.invert": false,
+      "manage.actions.expanded": true,
+      "manage.backup.expanded": true,
+      "manage.filters.expanded": true,
+      "manage.newUI": true,
+      "manage.newUI.favicons": false,
+      "manage.newUI.faviconsGray": true,
+      "manage.newUI.targets": 3,
+      "manage.newUI.sort": "title,asc",
+      "editor.options": {},
+      "editor.toc.expanded": true,
+      "editor.options.expanded": true,
+      "editor.lint.expanded": true,
+      "editor.lineWrapping": true,
+      "editor.smartIndent": true,
+      "editor.indentWithTabs": false,
+      "editor.tabSize": 4,
+      "editor.keyMap": "default",
+      "editor.theme": "default",
+      "editor.beautify": {
+        "selector_separator_newline": true,
+        "newline_before_open_brace": false,
+        "newline_after_open_brace": true,
+        "newline_between_properties": true,
+        "newline_before_close_brace": true,
+        "newline_between_rules": false,
+        "preserve_newlines": true,
+        "end_with_newline": false,
+        "indent_conditional": true
+      },
+      "editor.beautify.hotkey": "",
+      "editor.lintDelay": 300,
+      "editor.linter": "csslint",
+      "editor.lintReportDelay": 500,
+      "editor.matchHighlight": "token",
+      "editor.autoCloseBrackets": true,
+      "editor.autocompleteOnTyping": false,
+      "editor.contextDelete": true,
+      "editor.selectByTokens": true,
+      "editor.appliesToLineWidget": true,
+      "editor.livePreview": true,
+      "editor.colorpicker": true,
+      "editor.colorpicker.hexUppercase": false,
+      "editor.colorpicker.hotkey": "",
+      "editor.colorpicker.color": "#ebdbb2",
+      "editor.colorpicker.maxHeight": 300,
+      "hotkey._execute_browser_action": "",
+      "hotkey.openManage": "",
+      "hotkey.styleDisableAll": "",
+      "sync.enabled": "none",
+      "iconset": 0,
+      "badgeDisabled": "#8B0000",
+      "badgeNormal": "#006666",
+      "popupWidth": 246,
+      "updateInterval": 24
+    }
+  },
+  {
+    "enabled": true,
+    "updateUrl": null,
+    "md5Url": null,
+    "url": null,
+    "originalMd5": null,
+    "installDate": 1598372184320,
+    "name": "scrollbar",
+    "sections": [
+      {
+        "code": "::-webkit-scrollbar \n{\n    width: 4px;\n    transition: 2s;\n}\n\n::-webkit-scrollbar-thumb \n{\n    background: #555;\n    border: 0 solid transparent;\n    border-radius: 0;\n}\n\n::-webkit-scrollbar-track\n{\n    background: transparent;\n    border: 0 solid transparent;\n}\n\n::-webkit-scrollbar-corner \n{\n    background: transparent;\n}\n\n::-webkit-scrollbar-thumb:hover {\n    background-color:#888;\n}\n::-webkit-scrollbar-track:hover {\n    width: 8px;\n}\n::-webkit-scrollbar-thumb:active {\n    width: 8px;\n}\n::-webkit-scrollbar-track:active {\n    width: 8px;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+      }
+    ],
+    "updateDate": 1603939677065,
+    "_id": "f73dd829-c1ae-43e9-a64b-5dc5ce98981b",
+    "_rev": 1603939677065,
+    "id": 1
+  },
+  {
+    "enabled": true,
+    "updateUrl": null,
+    "url": null,
+    "installDate": 1610579449545,
+    "name": "4chin-home",
+    "sections": [
+      {
+        "code": "*{\n    color:#EADFD4 !important;\n    background-color: #282828 !important;\n}\n\n#boards{\n    vertical-align:middle;\n    font-family: 'liberation sans' !important;\n    font-size: 16px;\n    font-weight: 100;\n}\n\n\n\n#logo-fp, #popular-threads, #ft, #abc-cnt{\n    display:none !important;\n}\n\nbody{\n    padding: 8% 6% 0% 6%;\n    margin:0;\n    background: #1d2021 !important;\n}\n\nhtml{\n    background-color: #1d2021 !important;\n    \n}\n\n\n.box-outer.top-box{\n    border: 2px dashed #4b4b4b !important;\n}\n\n#doc\n{\n    margin:auto;\n    padding:0;\n    width:100%;\n    min-width: auto;\n    background-color: #282828 !important;\n\n}\n\n.boxcontent\n{\n    display: flex;\n    flex-direction:row;\n    flex-wrap:wrap;  \n    justify-content: space-between;\n}\n\n.column{\n    padding-top:10px;\n    margin:0;\n}\n",
+        "urls": [
+          "https://www.4chan.org/",
+          "https://4chan.org/"
+        ]
+      }
+    ],
+    "updateDate": 1617738704375,
+    "_id": "4826d372-84f7-432b-8b47-3435963aee19",
+    "_rev": 1617738704375,
+    "id": 7
+  },
+  {
+    "enabled": true,
+    "updateUrl": null,
+    "url": null,
+    "installDate": 1613743851264,
+    "name": "4chin-boards",
+    "sections": [
+      {
+        "code": "*{\n    filter: none !important;\n}\n\nbody, html\n{\n    background-color: #1d2021 !important;\n    padding: 0 1% !important;\n}\n\na:link, a:visited\n{\n   color: #458588 !important;\n}\n\na:hover, a:active\n{\n   color: #458588 !important;\n}\n\n\ninput:focus, input:active{\n    outline: none !important;   \n}\n\n.sideArrows, #boardNavDesktopFoot, .stylechanger, #toggleMsgBtn, #bannerCnt, #globalMessage, #blotter, #styleSwitcher, #globalToggle, .middlead.center, .abovePostForm, .aboveMidAd, hr, #absbot, .navLinks.navLinksBot.desktop .thread-stats, .ctrl-wrap, .postInfo.desktop input[type=checkbox], .adc-resp-bg, .navLinks.navLinksBottom.mobilebtn, #qrForm input[type=text]\n{\n    display: none;\n}\n\n/* catalog */\n\n#content\n{\n    width: 100% !important;\n}\n\n#content #threads\n{\n    border: 2px dashed #4b4b4b !important;\n    background-color: #282828 !important;\n    padding: 20px 0 !important;\n    display: flex !important;\n    justify-content: space-evenly !important;\n    flex-wrap: wrap;\n    margin: 0 !important;\n}\n\n\n/* header */\n\n.boardBanner {\n    margin: 80px 0 !important;\n}\n\n.boardTitle {\n    color: #d79921 !important;\n    font-weight: 400 !important;\n}\n\n#togglePostFormLink a {\n    color: #458588 !important;\n    font-weight: 400 !important;\n}\n\n/* nav links*/\n\n.navLinks.desktop, #ctrl\n{\n    margin: 20px 0 !important;\n}\n\n.navLinks.navLinksBot.desktop\n{\n    text-align: center !important;\n    margin: 0 auto !important;\n}\n\n\n/* thread watcher */\n\n#threadWatcher\n{\n    margin: 0 !important;\n    padding: 0 !important;\n    border: 2px dashed #4b4b4b !important;\n    background-color: #282828 !important;\n}\n\n#watchList li{\n    border: none !important;\n}\n\n/* OP */\n\n.postContainer.opContainer\n{\n    display: block !important;\n    background-color: #1d2021 !important;\n    border: 2px dashed #4b4b4b !important;\n    padding: 15px !important;\n    margin-bottom: 10px !important;\n}\n\n.postContainer.opContainer .fileText{\n    width: 100% !important;\n    font-size: 12px !important;\n    margin: 0 !important;\n}\n\n.postContainer.opContainer .fileThumb{\n    margin-top: 15px !important;\n    margin-bottom: 0 !important;\n    margin-right: 0 !important;\n    margin-left: 0 !important;\n}\n\n.postContainer.opContainer .postInfo.desktop\n{\n    margin-top: 15px !important;\n    margin-bottom: 0 !important;\n    margin-right: 0 !important;\n    margin-left: 0 !important;\n}\n\n.postContainer.opContainer .postMessage\n{\n    margin-top: 15px !important;\n    margin-bottom: 0 !important;\n    margin-right: 0 !important;\n    margin-left: 0 !important;\n}\n\n/* replies */\n\n\n.reply {\n    border: 2px dashed #4b4b4b !important;\n    background-color: #282828 !important;\n    display: block !important;\n    padding: 15px !important;\n    margin: 10px auto !important;\n}\n\n.postInfo.desktop\n{\n    width: 100% !important;\n    display: inline-block !important;\n    font-size: 12px !important;\n    padding: 0 !important;\n    margin: 0 !important;\n}\n\n.file{\n    width: 100% !important;\n   /* display: inline-block !important; for thumbnails above replies*/\n}\n\n.fileText{\n    width: 100% !important;\n    font-size: 12px !important;\n    margin: 15px 0 !important;\n}\n\n.fileThumb\n{\n    margin-top: 0 !important;\n    margin-bottom: 0 !important;\n    margin-right: 15px !important;\n    margin-left: 0 !important;\n}\n\n.postMessage\n{\n    width: 100% !important;\n    margin-top: 15px !important;\n    margin-bottom: 0 !important;\n    margin-right: 0 !important;\n    margin-left: 0 !important;\n}\n\n\n.preview {\n    border: 2px dashed #4b4b4b !important;\n    background-color: #282828 !important;\n}\n\n.reply:target, .reply.highlight{\n    border: 2px dashed #4b4b4b !important;\n    background-color: #1d2021 !important;\n    \n}\n\n.quote\n{\n    color: #98971a !important;\n}\n\n/* quick reply */\n\n#quickReply\n{\n    border: 2px solid #4b4b4b !important;\n    padding: 0 !important;\n    margin: 0 !important;\n    overflow: hidden !important;\n    background-color: #222222 !important;\n}\n\n#qrHeader\n{\n    font-size: 10px !important;\n    font-family: monospace;\n    margin: 9px 0 !important;\n    line-height: 2;\n    background-color: #222222 !important;\n}\n\n#qrHeader img{\n    position: absolute;\n    right: 10px;\n}\n\n#qrCaptchaContainer\n{\n    height: 0 !important;\n    margin: 0 auto !important;\n    overflow: hidden !important;\n}\n\n#qrCaptchaContainer div{\n    display: block !important;\n    position: absolute !important;\n    height: 55px !important;\n    width: 41px !important;\n    top: -9px !Important;\n    right: 2px;\n    left: -4px !important;\n    overflow: hidden !important;\n    \n}\n\n#qrForm{\n    margin: 0 !important;\n    padding: 0 !important;\n    \n}\n\n#qrForm div\n{\n    border: none !important;\n    margin: 0 !important;\n    padding: 0 !important;\n    \n}\n\n/*\n#qrForm input[type=text]\n{\n    display:none !important;\n    border: none !important;\n    width: 100% !important;\n    background-color: #1d2021 !important;\n    margin: 4px 0 0 0 !important;\n    padding: 4px !important;\n    text-align: left !important;\n}\n*/\n\n#qrForm textarea\n{\n    text-align: left;\n    Border: none !important;\n    background-color: #282828 !important;\n    margin: 0 0 0 0 !important;\n    padding: 0 !important;\n}\n\n\n#qrForm input[type=file]\n{\n    width: 124%!important;\n    margin: 0 0 0 0 !important;\n    display: inline-block !important;\n    border: 0 dashed #4b4b4b !important;\n    background-color: #1d2021 !important;\n    font-size: 10px !important;\n    font-family: monospace;\n    left: -72px !important;\n    position: relative;\n    border-top: 2px dashed #00000000 !important;\n    border-bottom: 2px dashed #00000000 !important;\n    border-left: none !important;\n    border-right: none !important;\n    height: 20px !important;\n}\n\n#qrSpoiler\n{\n    width: 100% !important;\n    display: block !important;\n    font-size: 10px !important;\n    font-family: monospace;\n}\n\n#qrForm input[type=submit]\n{\n    font-size: 10px !important;\n    font-family: monospace;\n    padding: 0 !important;\n    margin: 0 0 0 0 !important;\n    background-color: #1d2021 !important;\n    display: inline-block !important;\n    width: 100% !important;\n    border-top: 2px dashed #00000000 !important;\n    border-bottom: 2px dashed #00000000 !important;\n    border-left: none !important;\n    border-right: none !important;  \n    height: 25px !important;\n    color:#ebdbb2 !important;\n}\n\n#qrError\n{\n    margin: 0 auto !important;\n    min-width: 0 !important;\n}\n\n#qrForm input[type=submit]:focus,\n#qrForm input[type=submit]:active,\n#qrForm input[type=file]:focus,\n#qrForm input[type=file]:active\n{\n    border-top: 2px dashed #4d4d4d !important;\n    border-bottom: 2px dashed #4d4d4d !important;\n}\n\n\n/* post a reply (bottom)*/\n\n.navLinks.navLinksBot.desktop .open-qr-wrap\n{\n    position: inherit !important;\n    margin-top: 20px !important;\n    margin-bottom: 15px !important;\n    margin-right: auto !important;\n    margin-left: auto !important;  \n    padding: 0 !important;\n}\n\n\n/* delete post */\n\n.bottomCtrl.desktop\n{\n    margin: 15px 0 !important;\n    padding: 0 !important;\n    width: 100% !important;\n    text-align: center !important;\n}\n\n.bottomCtrl.desktop input[type=submit]\n{\n    display: inline !important;\n    border: 2px dashed #4b4b4b !important;\n    background-color: #1d2021;\n    margin-left: 4px !important;\n    color: inherit !important;\n}\n\n.bottomCtrl.desktop input[type=submit]:active,\n.bottomCtrl.desktop input[type=submit]:active\n{\n    border: 2px dashed #ebdbb2 !important;\n}\n",
+        "regexps": [
+          "https://boards.4channel.org/.*/thread/.*",
+          "https://boards.4channel.org/.*/catalog",
+          "https://boards.4chan.org/.*/thread/.*",
+          "https://boards.4chan.org/.*/catalog"
+        ]
+      }
+    ],
+    "updateDate": 1617740427362,
+    "_id": "b8f8a941-f3b7-4572-b1c8-a6120ff2c7e5",
+    "_rev": 1617740427362,
+    "id": 10
+  },
+  {
+    "enabled": true,
+    "updateUrl": null,
+    "url": null,
+    "installDate": 1617920159811,
+    "name": "geoguesser",
+    "sections": [
+      {
+        "code": "#map:hover\n{\n    height:80% !important;\n    width:80% !important;\n}",
+        "regexps": [
+          "https://geoguessmaster.com/.*"
+        ]
+      }
+    ],
+    "updateDate": 1617920688495,
+    "_id": "8fcb7af8-1522-4619-a0f0-fcf36f2b4f74",
+    "_rev": 1617920688495,
+    "id": 11
+  }
+]
