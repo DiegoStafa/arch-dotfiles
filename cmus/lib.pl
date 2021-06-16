@@ -33,9 +33,11 @@
 /home/diego/music/Tokoyami Towa sama - Lemon (20_10_2020)-KsX-ZWG22aM.m4a
 /home/diego/music/TVアニメ「ゾンビランドサガ」OPテーマ『徒花ネクロマンシー』-yDXVqicnWeo.webm
 /home/diego/music/うっせぇわ／Covered by紫咲シオン【歌ってみた】-5fifnky9v_I.m4a
+/home/diego/music/【クソザコ回線でも】わためラップ【投稿ならできる】-j5n1zqsvfXo.m4a
 /home/diego/music/グレゴリオ _古川本舗 　covered by アルス・アルマル-XyL6bhHsNhQ.webm
 /home/diego/music/【しっとりと】ダイアモンドクレバス_Diamond Crevasse(cover)【歌ってみた_ときのそら】-x1_OmuQLRYU.webm
 /home/diego/music/スネ夫が自慢話をするときに流れているKING歌ってみた-85GMixQRHFw.webm
+/home/diego/music/ホロライブ言えるかな？ Beyond the Stage ver.【STAGE1＋2 edit】-mZ0sJQC8qkE.m4a
 /home/diego/music/三浦大知 (Daichi Miura) _ Blizzard (映画『ドラゴンボール超 ブロリー』主題歌)-YqllOJ7ut10.webm
 /home/diego/music/夜に駆ける _ Covered by 紫咲シオン【YOASOBI】-4X-eZH87BTw.webm
 /home/diego/music/[東方] ャプテン・マリンのケツアンカー ／ 宝鐘マリン _ ホロライブ #幻想郷ホロイズム #GensokyoHoloism-DmLD2AtTTfM.webm

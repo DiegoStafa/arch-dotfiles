@@ -1,4 +1,5 @@
 add music
+filter 
 live-filter 
 bind -f common q quit
 bind -f common q quit -i

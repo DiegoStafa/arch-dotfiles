@@ -1,35 +1,3 @@
 configuration {
-	modi: "drun,run,window,clipboard:greenclip print";
-	width: 33;
-	lines: 10;
-	columns: 1;
-	font: "terminus 9";
-	terminal: "alacritty";
-	run-command: "{cmd}";
-	run-shell-command: "{terminal} --hold -e fish -c "{cmd}; exec fish" &";
-	icon-theme: "Suru++ 25 Dark";
-	show-icons: false;
-	separator-style: "none";
-	hide-scrollbar: true;
-	dpi: 96;
-	show-match: false;
-	drun-match-fields: "name,categories";
-	drun-display-format: "{name}";
-	line-margin: 0;
-	line-padding: 8;
-	padding:0;
-	bw: 1;
-	window-format: "{w} {c} {n} {t}";
-	
-	// 				bg 			fg					bg curr		fg curr
-	color-normal: "#00000000, #AB948D, #00000000, #004c4941, #EADFD4";
-	color-urgent: "#ff373737, #ffebdbb2, #ff373737, #ffdc322f, #ffebdbb2";
-	color-active: "#00000000, #ffffffff, #00000000, #30ebdbb2, #ffebdbb2";
-	color-window: "#f0282428, #EADFD4, #00000000";
-
-	kb-mode-next: "Super+Right,Tab";
-	kb-mode-previous: "Super+Left,Ctrl+Tab";
-	kb-row-tab: "";
-	me-select-entry: "MouseSecondary";
-	me-accept-entry: "MousePrimary";
+	theme: "orchis";
 }

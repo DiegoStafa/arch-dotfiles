@@ -34,7 +34,7 @@ active 			= #b4fb73
 ###########################################################
 
 [bar/prototype]
-monitor			= ${env:MONITOR:eDP1}
+#monitor			= ${env:MONITOR:eDP1}
 background		= ${colors.bg}
 foreground		= ${colors.fg}
 

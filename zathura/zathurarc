@@ -1,12 +1,13 @@
 set selection-clipboard "clipboard"
 
-set default-bg "#282828"
+set default-bg "#2c2c2c"
 set recolor "false"
-set recolor-lightcolor "#282828"
-set statusbar-bg "#1d2021"
-set inputbar-bg "#1d2021"
-set inputbar-fg "#ebdbb2"
-
-set font "liberation mono 8"
-
+set recolor-lightcolor "#2c2c2c"
+set statusbar-bg "#2c2c2c"
+set inputbar-bg "#2c2c2c"
+set inputbar-fg "#eeffff"
+set guioptions none
+set font "terminus 10"
+set window-title-basename true
+set window-title-home-tilde true
 map <A-s> toggle_statusbar

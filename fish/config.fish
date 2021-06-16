@@ -42,3 +42,4 @@ alias getip="curl http://icanhazip.com/"
 alias region="slop"
 
 alias webcam="ffmpeg -i /dev/video0 -pix_fmt yuv420p -an -f sdl2 "Webcam-Preview""
+alias md2html="marked"

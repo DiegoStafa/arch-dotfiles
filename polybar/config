@@ -2,15 +2,12 @@
 #---------------------- VARIABLES ------------------------#
 ###########################################################
 
-; 20b2a6
-; f92672
-
 [colors]
-bg 							= #ed1d2021
-fg 							= #ebdbb2
+bg 							= #c0000000
+fg 							= #eeffff
 active 						= #fb4934
 ac 							= #BE302F
-mf							= #ed1d2021
+mf							= #c0000000
 
 trans 						= #00000000
 white 						= #FFFFFF
@@ -41,8 +38,8 @@ blue-gray 					= #546e7a
 
 [bar/mybar]
 #label-unfocused-foreground	= #90ebdbb2
-#monitor			 			= $DISPLAY
-wm-name = "polybar_mob"
+#monitor			 		= $DISPLAY
+wm-name 					= "polybar_mob"
 font-0 						= "misc tamsyn:style=regular:size=13;2"
 font-1 						= "ipapgothic:size=9;3"
 
@@ -160,6 +157,13 @@ format						= <label>
 label 						= %output%
 label-padding 				= 1
 interval 					= 0.5
+
+[module/launcher]
+type 						= custom/text
+content						= "#"
+content-padding				= 1
+content-background 			= ${colors.mf}
+click-left	 				= "rofi -show drun"
 
 [module/title]
 type						= internal/xwindow
@@ -300,3 +304,5 @@ compositing-foreground		= source
 [global/wm]
 margin-top					= 0
 margin-bottom				= 0
+; vim:ft=dosini
+

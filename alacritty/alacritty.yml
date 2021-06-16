@@ -7,6 +7,7 @@ font:
     style: regular
   bold:
     family: misc tamsyn
+
     style: regular
 
 window:
@@ -29,29 +30,27 @@ key_bindings:
 colors:
   # Default colors
   primary:
-    # hard contrast: background = '#1d2021'
-    background: '#282828'
-    # soft contrast: background = '#32302f'
-    foreground: '#ebdbb2'
+    background: '#0c0c0c'
+    foreground: '#cccccc'
 
   # Normal colors
   normal:
-    black: '#282828'
-    red: '#cc241d'
-    green: '#98971a'
-    yellow: '#d79921'
-    blue: '#458588'
-    magenta: '#b16286'
-    cyan: '#689d6a'
-    white: '#a89984'
+    black: '#0c0c0c'
+    red: '#c50f1f'
+    green: '#13a10e'
+    yellow: '#c19c00'
+    blue: '#0037da'
+    magenta: '#881798'
+    cyan: '#3a96dd'
+    white: '#cccccc'
 
   # Bright colors
   bright:
-    black: '#928374'
-    red: '#fb4934'
-    green: '#b8bb26'
-    yellow: '#fabd2f'
-    blue: '#83a598'
-    magenta: '#d3869b'
-    cyan: '#8ec07c'
-    white: '#ebdbb2'
+    black: '#767676'
+    red: '#e74856'
+    green: '#16c60c'
+    yellow: '#f9f1a5'
+    blue: '#3b78ff'
+    magenta: '#b4009e'
+    cyan: '#61d6d6'
+    white: '#f2f2f2'

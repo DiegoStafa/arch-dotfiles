@@ -1,22 +1,22 @@
 # ------------------------ APPEARANCE ----------------------- #
 
-for_window [class="^.*"] 		border pixel 2
+for_window [class="^.*"] 		border pixel 0
 #title_align 					center
 #for_window [floating]	 		border pixel 0
 #font misc tamsyn 0
 font pango: monospace 0
 
 # window colours: 				tit. bord.	bg      	text    	split ind.	border c.  
-client.focused 					#a89984 	#a89984		#a89984		#ebdbb2		#a89984
-client.focused_inactive			#1d2021 	#1d2021		#a89984		#282828		#1d2021
-client.unfocused				#1d2021 	#1d2021		#a89984		#282828		#1d2021
-client.urgent					#1d2021 	#1d2021		#a89984		#282828		#1d2021
+client.focused 					#898989 	#898989		#898989		#ebdbb2		#898989
+client.focused_inactive			#2c2c2c 	#2c2c2c		#898989		#282828		#2c2c2c
+client.unfocused				#2c2c2c 	#2c2c2c		#898989		#282828		#2c2c2c
+client.urgent					#2c2c2c 	#2c2c2c		#898989		#282828		#2c2c2c
 
 hide_edge_borders smart
 
 # default gaps values
-set 	$inner_gaps 			0
-set 	$outer_gaps 			0
+set 	$inner_gaps 			10
+set 	$outer_gaps 			10
 
 gaps 	inner 					$inner_gaps
 gaps 	outer					$outer_gaps
@@ -91,7 +91,7 @@ bindsym $mod+Control+Left		move left
 bindsym $mod+Control+Down		move down
 bindsym $mod+Control+Up			move up
 bindsym $mod+Control+Right		move right
-bindsym $mod+Shift+q			kill
+bindsym $mod+Shift+w			kill
 
 bindsym $mod+f					fullscreen toggle
 bindsym $mod+r 					mode "resize mode"
@@ -142,12 +142,13 @@ bindsym $mod+Shift+Right 		workspace next
 
 exec --no-startup-id 			"polybar mybar"
 exec --no-startup-id			"tint2"
+exec --no-startup-id			"picom"
 exec --no-startup-id			"nm-applet"
 exec --no-startup-id 			"redshift"
 exec --no-startup-id 			"greenclip daemon"
 exec --no-startup-id 			"touch /tmp/xhide_list"
-exec --no-startup-id			"python -m http.server 7777 --directory $HOME/public"
-#exec --no-startup-id			"feh --recursive --bg-fill --randomize ~/images/wallpapers/art"
+exec --no-startup-id			"python -m http.server 7000 --directory /home/diego/public"
+exec --no-startup-id			"feh --recursive --bg-fill --randomize ~/images/wallpapers/art/1619160808247.jpg"
 
 # ---------------- user keybinds ----------------------- #
 
@@ -210,6 +211,7 @@ bindsym XF86MonBrightnessDown 	exec --no-startup-id light -U 5
 bindsym XF86ScreenSaver 		exec --no-startup-id xset dpms force off
 
 for_window [class="Xboard"] floating enable
+for_window [title="Arch Update"] floating enable
 for_window [class="SpeedCrunch"] floating enable
 for_window [class="Blueman*"] floating enable
 for_window [class="Lxappearance"] floating enable
